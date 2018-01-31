@@ -76,10 +76,11 @@ def readTweets():
 		for i in range(0, len(tweets)):
 			tweetsList.append(tweets[i]['text'])
 		# print(tweets[0]['text'])
-	print tweetsList
+	return tweetsList
 
 
-
+def getMoviesList():
+	print "get movies"
 # Television Awards
 
 # def main():

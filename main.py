@@ -12,14 +12,14 @@ import json
 
 # Motion Picture Awards
 mAward1 = 'Best Motion Picture - Drama'
-mAward2 = 'Best Motion Picture – Musical or Comedy'
+mAward2 = 'Best Motion Picture - Musical or Comedy'
 mAward3 = 'Best Director'
-mAward4 = 'Best Actor – Motion Picture Drama'
-mAward5 = 'Best Actor – Motion Picture Musical or Comedy'
-mAward6 = 'Best Actress – Motion Picture Drama'
-mAward7 = 'Best Actress – Motion Picture Musical or Comedy'
-mAward8 = 'Best Supporting Actor – Motion Picture'
-mAward9 = 'Best Supporting Actress – Motion Picture'
+mAward4 = 'Best Actor - Motion Picture Drama'
+mAward5 = 'Best Actor - Motion Picture Musical or Comedy'
+mAward6 = 'Best Actress - Motion Picture Drama'
+mAward7 = 'Best Actress - Motion Picture Musical or Comedy'
+mAward8 = 'Best Supporting Actor - Motion Picture'
+mAward9 = 'Best Supporting Actress - Motion Picture'
 mAward10 = 'Best Screenplay'
 mAward11 = 'Best Original Score'
 mAward12 = 'Best Original Song'
@@ -41,7 +41,7 @@ tAward10 = 'Best Supporting Actor in a Series, Limited Series or Motion Picture 
 tAward11 = 'Best Supporting Actress in a Series, Limited Series or Motion Picture made for Television'
 
 ignore_list = ['golden', 'globes', 'globe', 'goldenglobes', '#goldenglobes', 'oscars']
-stopwords = snltk.corpus.stopwords.words('english')
+# stopwords = snltk.corpus.stopwords.words('english')
 
 
 def predictWinner(category, tweets, parsedList):
@@ -54,6 +54,7 @@ def countMatchingTweets(tweets, keywords):
 	d = defaultdict(int)
 	for i in range(0, len(tweets)):
 		if findMatches(tweets[i], keywords):
+			print("ok")
 
 
 def findMatches(tweet, keywords):
@@ -62,13 +63,25 @@ def findMatches(tweet, keywords):
             return False
     return True
 
-with open('test1.json', encoding='utf-8') as data_file:
-	print('hi')
-	tweets = json.load(data_file)
-	print(tweets[0])
+
+	
+
+# each tweet has 2 attributes, tweets[0]['text'] and tweets[0]['id_str']
+# I suspect id_str is useless so will not include it in the array for now
+def readTweets():
+	tweetsList = []
+	with open('test1.json') as data_file:
+		print('hi')
+		tweets = json.load(data_file)
+		for i in range(0, len(tweets)):
+			tweetsList.append(tweets[i]['text'])
+		# print(tweets[0]['text'])
+	print tweetsList
+
+
 
 # Television Awards
 
-def main():
+# def main():
 	
 

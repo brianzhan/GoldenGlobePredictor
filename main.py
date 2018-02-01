@@ -9,6 +9,7 @@ import nltk
 from nltk.corpus import stopwords
 from collections import Counter
 import json
+import xml.etree.ElementTree as ElementTree
 
 # Motion Picture Awards
 mAward1 = 'Best Motion Picture - Drama'
@@ -58,7 +59,7 @@ def countMatchingTweets(tweets, keywords):
 
 
 def findMatches(tweet, keywords):
-    for word in words_to_match:
+    for word in keywords:
         if word not in tweet:
             return False
     return True
@@ -73,16 +74,52 @@ def readTweets():
 	with open('test1.json') as data_file:
 		print('hi')
 		tweets = json.load(data_file)
-		for i in range(0, len(tweets)):
+		for i in range(0, 10000):
 			tweetsList.append(tweets[i]['text'])
 		# print(tweets[0]['text'])
 	return tweetsList
 
+def getBestMotion(tweetsList):
+	keywords = ['best', 'picture']
+	# d = defaultdict(int)
+	foundone = False
+	for i in range(0, len(tweetsList)):
+		if findMatches(tweetsList, keywords):
+			print pos_tag(tweetsList[i]['text'])
+			foundone = True
+	print foundone
+	
+
 
 def getMoviesList():
 	print "get movies"
+	movieList = getMoviesList()
+	tvList = getTvList()
+	presenterList = getPresenterList()
+
+def getMoviesList():
+	tree = ElementTree.parse('2018GGData.xml')
+	root = tree.getroot()
+	body = tree.find('body')
+	print 'body is ', body
+	content_div = body.findall('div')
+	print 'content is ', content_div
+	return []
+
+def getTvList():
+	return []
+
+def getPresenterList():
+	return []
 # Television Awards
 
-# def main():
+def main():
+	tweetsList = readTweets()
+	print len(tweetsList)
+	print getBestMotion(tweetsList)
+
+if __name__ == "__main__":
+	main()
 	
+# getMoviesList()
 

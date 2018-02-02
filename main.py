@@ -10,6 +10,8 @@ from nltk.corpus import stopwords
 from collections import Counter
 import json
 import xml.etree.ElementTree as ElementTree
+from nltk.tag import pos_tag
+
 
 # Motion Picture Awards
 mAward1 = 'Best Motion Picture - Drama'
@@ -72,9 +74,8 @@ def findMatches(tweet, keywords):
 def readTweets():
 	tweetsList = []
 	with open('test1.json') as data_file:
-		print('hi')
 		tweets = json.load(data_file)
-		for i in range(0, 10000):
+		for i in range(0, 10):
 			tweetsList.append(tweets[i]['text'])
 		# print(tweets[0]['text'])
 	return tweetsList
@@ -83,9 +84,10 @@ def getBestMotion(tweetsList):
 	keywords = ['best', 'picture']
 	# d = defaultdict(int)
 	foundone = False
-	for i in range(0, len(tweetsList)):
+	for i in range(0, 10):
+		print pos_tag(tweetsList[i].split())
 		if findMatches(tweetsList, keywords):
-			print pos_tag(tweetsList[i]['text'])
+			print pos_tag(tweetsList[i]['text'].split())
 			foundone = True
 	print foundone
 	
@@ -115,7 +117,7 @@ def getPresenterList():
 
 def main():
 	tweetsList = readTweets()
-	print len(tweetsList)
+	# print len(tweetsList)
 	print getBestMotion(tweetsList)
 
 if __name__ == "__main__":

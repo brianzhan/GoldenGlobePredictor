@@ -67,15 +67,13 @@ def findMatches(tweet, keywords):
     return True
 
 
-	
-
 # each tweet has 2 attributes, tweets[0]['text'] and tweets[0]['id_str']
 # I suspect id_str is useless so will not include it in the array for now
 def readTweets():
 	tweetsList = []
 	with open('test1.json') as data_file:
 		tweets = json.load(data_file)
-		for i in range(0, 10):
+		for i in range(0, 50000):
 			tweetsList.append(tweets[i]['text'])
 		# print(tweets[0]['text'])
 	return tweetsList
@@ -90,6 +88,12 @@ def getBestMotion(tweetsList):
 			print pos_tag(tweetsList[i]['text'].split())
 			foundone = True
 	print foundone
+
+def stupidGuess(tweetsList):
+	for i in range(0, 50000):
+		if "Congratulations to" in tweetsList[i]:
+			print tweetsList[i]
+	print "done"
 	
 
 
@@ -118,7 +122,8 @@ def getPresenterList():
 def main():
 	tweetsList = readTweets()
 	# print len(tweetsList)
-	print getBestMotion(tweetsList)
+	# print getBestMotion(tweetsList)
+	print stupidGuess(tweetsList)
 
 if __name__ == "__main__":
 	main()

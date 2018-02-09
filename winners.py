@@ -3,9 +3,9 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.tag import pos_tag
-import spacy
-from spacy import displacy
-import re
+# import spacy
+# from spacy import displacy
+# import re
 
 # Motion Picture Awards
 mAwards = ['Best Motion Picture - Drama','Best Motion Picture - Musical or Comedy','Best Director','Best Actor - Motion Picture Drama','Best Actor - Motion Picture Musical or Comedy',
@@ -28,7 +28,7 @@ class Award:
 		self.nominees = nominees
 		self.winner = winner
 		self.winner_votes = winner_votes
-		self.filtered_sentence = []
+		self.filtered_sentence = filtered_sentence
 
 	def print_award(self):
 		print('Award: {}'.format(self.name))
@@ -63,8 +63,9 @@ def analyze(tweets):
 
 	stop_words = stopwords.words('english')
 	stop_words_custom = ['-']
-	nlp = spacy.load('en')
-
+	name_stop_words = ['Best','Golden','Globes','Actor','Actress']
+	# nlp = spacy.load('en')
+	prev = ''
 
 	for award in Award_list:
 		filtered_sentence = []
@@ -91,31 +92,48 @@ def analyze(tweets):
 						filtered_sentence.append(word)
 					filtered_sentence = pos_tag(filtered_sentence)
 					chunked = nltk.ne_chunk(filtered_sentence)
-					chunked.draw()
 					
 					winner = ""
 					for chunk in chunked.subtrees(filter=lambda t: t.label()=='PERSON'):
 						for item in chunk.subtrees():
 							for word in item.leaves():
 								winner += word[0] + ' '
-							break
+						break
+					winner = winner.strip()
 
-					print(winner)
-					print('{} \n'.format(tweet))
+					check = True
+					for word in name_stop_words:
+						if(word in winner):
+							check = False
+					
 
-					# if(winner not in award.winner_votes):
-					# 	award.winner_votes[winner] = 1
-					# else:
-					# 	award.winner_votes[winner] += 1
+					# winner = winner.encode('utf-8')
+					if(check):
+						if(winner in award.winner_votes):
+							award.winner_votes[winner] += 1
+						else:
+							award.winner_votes[winner] = 1
+							
+							# print('Cur:{}'.format(winner))
+							# print('Prev:{}'.format(prev))
+							# if(prev == winner):
+							# 	print('overlap')
+							# else:
+							# 	print('no overlap')
+							# print('\n')
+							# prev = winner
+							print(award.name)
+							print(winner)
+							print('\n')
 
 
-	# for award in Award_list:
-	# 	max_votes = 0
-	# 	for person,val in award.winner_votes.items():
-	# 		if(val>max_votes):
-	# 			award.winner = person
+	for award in Award_list:
+		max_votes = 0
+		for person,val in award.winner_votes.items():
+			if(val>max_votes):
+				award.winner = person
 
-	# 	award.print_award()
+		award.print_award()
 
 
 	# stop_words = stopwords.words('english')

@@ -50,7 +50,7 @@ def readtweets():
 	tweets_list = []
 	with open('gg2018.json') as data_file:
 		tweets = json.load(data_file)
-		for i in range(400000,401000):
+		for i in range(500000,501000):
 			tweets_list.append(tweets[i]['text'])
 			# print(tweets[i]['text'])
 			# print('\n')
@@ -76,55 +76,70 @@ def analyze(tweets):
 		award.filtered_sentence = filtered_sentence
 
 	for tweet in tweets:
+
+		max_count = 0
+		award_guess = None
+		# count is to find only 1 award in each tweet
 		for award in Award_list:
+			count = 0
 			check = True
 			for word in award.filtered_sentence:
 				if word not in tweet:
 					check = False
+				else:
+					count += 1
+			if(count>max_count and check):
+				award_guess = award
+				max_count = count
 
-			if(check):
-				if('win' in tweet or 'Congratulations' in tweet):
-					words = word_tokenize(tweet)
-					filtered_sentence = []
-					for word in words:
-						if word == 'https':
-							break
-						filtered_sentence.append(word)
-					filtered_sentence = pos_tag(filtered_sentence)
-					chunked = nltk.ne_chunk(filtered_sentence)
+		
+		if(('win' in tweet or 'Congratulations' in tweet) and award_guess != None):
+			words = word_tokenize(tweet)
+			filtered_sentence = []
+			for word in words:
+				if word == 'https':
+					break
+				filtered_sentence.append(word)
+			filtered_sentence = pos_tag(filtered_sentence)
+			chunked = nltk.ne_chunk(filtered_sentence)
+			
+			winner = ""
+			for chunk in chunked.subtrees(filter=lambda t: t.label()=='PERSON'):
+				for item in chunk.subtrees():
+					for word in item.leaves():
+						winner += word[0] + ' '
+				break
+			winner = winner.strip()
+
+			
+
+			check = True
+			for word in name_stop_words:
+				if(word in winner):
+					check = False
+			
+
+			print(award_guess.name)
+			print(winner)
+			print(tweet)
+			print('\n')
+
+			# winner = winner.encode('utf-8')
+			if(check and winner != ""):
+				if(winner in award_guess.winner_votes):
+					award_guess.winner_votes[winner] += 1
+				else:
+					award_guess.winner_votes[winner] = 1
 					
-					winner = ""
-					for chunk in chunked.subtrees(filter=lambda t: t.label()=='PERSON'):
-						for item in chunk.subtrees():
-							for word in item.leaves():
-								winner += word[0] + ' '
-						break
-					winner = winner.strip()
-
-					check = True
-					for word in name_stop_words:
-						if(word in winner):
-							check = False
+					# print('Cur:{}'.format(winner))
+					# print('Prev:{}'.format(prev))
+					# if(prev == winner):
+					# 	print('overlap')
+					# else:
+					# 	print('no overlap')
+					# print('\n')
+					# prev = winner
 					
-
-					# winner = winner.encode('utf-8')
-					if(check):
-						if(winner in award.winner_votes):
-							award.winner_votes[winner] += 1
-						else:
-							award.winner_votes[winner] = 1
-							
-							# print('Cur:{}'.format(winner))
-							# print('Prev:{}'.format(prev))
-							# if(prev == winner):
-							# 	print('overlap')
-							# else:
-							# 	print('no overlap')
-							# print('\n')
-							# prev = winner
-							print(award.name)
-							print(winner)
-							print('\n')
 
 
 	for award in Award_list:

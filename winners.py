@@ -4,8 +4,8 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.tag import pos_tag
 # import spacy
-# from spacy import displacy
-# import re
+
+
 
 # Motion Picture Awards
 mAwards = ['Best Motion Picture - Drama','Best Motion Picture - Musical or Comedy','Best Director','Best Actor - Motion Picture Drama','Best Actor - Motion Picture Musical or Comedy',
@@ -18,7 +18,10 @@ tAwards = ['Best Drama Series','Best Comedy Series','Best Actor in a Television 
 'Best Actress in a Limited Series or Motion Picture made for Television','Best Supporting Actor in a Series, Limited Series or Motion Picture made for Television',
 'Best Supporting Actress in a Series, Limited Series or Motion Picture made for Television']
 
+
+# List of Award objects that hold information about each award
 Award_list = []
+
 
 class Award:
 
@@ -38,7 +41,11 @@ class Award:
 		# print('Winner votes: {}\n'.format(self.winner_votes))
 
 
+# Initialize awards function that loops through the list of TV and Movie awards and creates Award objects with those names and adds it to Award_list 
+# The Function then loops through the award name and creates a list called filtered_sentence which only keeps key words in the award name
 def init_awards():
+
+	# Create award objects and add to Award_list
 	for mAward in mAwards:
 		award_obj = Award(mAward,'',[],'',{},[])
 		Award_list.append(award_obj)
@@ -46,103 +53,116 @@ def init_awards():
 		award_obj = Award(tAward,'',[],'',{},[])
 		Award_list.append(award_obj)
 
-
-def readtweets():
-	tweets_list = []
-	with open('gg2018.json') as data_file:
-		tweets = json.load(data_file)
-		# for i in range(500000,510000):
-		# 	tweets_list.append(tweets[i]['text'])
-			# print(tweets[i]['text'])
-			# print('\n')
-		for tweet in tweets:
-			tweets_list.append(tweet['text'])
-	return tweets_list
-
-
-def analyze(tweets):
-
+	# Make a filtered_sentence of key words for each object using stop_words
 	stop_words = stopwords.words('english')
-	stop_words_custom = ['-']
-	name_stop_words = ['Best','Golden','Globes','Actor','Actress']
-	# nlp = spacy.load('en')
-	prev = ''
-
+	stop_words_custom = ['-','made']
 	for award in Award_list:
 		filtered_sentence = []
 		words = word_tokenize(award.name)
 		for word in words:
 			if(word not in stop_words and word not in stop_words_custom):
-				filtered_sentence.append(word)
+				filtered_sentence.append(word.strip(','))
 		award.filtered_sentence = filtered_sentence
 
-	for tweet in tweets:
 
-		max_count = 0
-		award_guess = None
-		# count is to find only 1 award in each tweet
-		for award in Award_list:
-			count = 0
-			check = True
-			for word in award.filtered_sentence:
-				if word not in tweet:
-					check = False
-				else:
-					count += 1
-			if(count>max_count and check):
-				award_guess = award
-				max_count = count
+# Opens json file with ~800,000 tweets and returns a list of the tweets
+def analyze_tweets(filename):
+
+	stop_words = ['Best','Golden','Globes','Actor','Actress']
+	with open(filename) as data_file:
+		tweets = json.load(data_file)
+
+		# for i in range(500000,510000):
+		# 	analyze(tweet['text'],stop_words)
+
+
+		for tweet in tweets:
+			analyze(tweet['text'],stop_words)
+
+
+# Analyze algorithm that first finds which award it matches if any
+def analyze(tweet,name_stop_words):
+
+	tweet_lowercase = tweet.lower()
+
+	# We made the assumption that each tweet references at most 1 award (could reference 0)
+	# This loop goes through each word of the award name after it was filtered for key words
+	# and counts the number of words that match in the tweet
+	# We only consider awards where all the keywords are in the tweet
+	# Since it is possible that multiple award names could have all its keywords in the tweet,
+	# we decided to take the longest award name that has all its keywords in the tweet
+	# For instance, the tweet could reference the award name 'Best Actress - Motion Picture Drama'
+	# However, both that award and the award 'Best Motion Picture - Drama' would be a match
+	# So pick the longer one ('Best Actress - Motion Picture Drama') which is the correct one 
+	max_count = 0
+	award_guess = None
+	for award in Award_list:
+		count = 0
+		check = True
+		for word in award.filtered_sentence:
+			if word.lower() not in tweet_lowercase:
+				check = False
+			else:
+				count += 1
+		if(count>max_count and check):
+			award_guess = award
+			max_count = count
+
+	
+	# Looking for the winner so filters tweets by 'win' or 'congratulations'
+	if(('win' in tweet_lowercase or 'congratulations' in tweet_lowercase) and award_guess != None):
+		words = word_tokenize(tweet)
+		filtered_sentence = []
+		for word in words:
+			if word == 'https':
+				break
+			filtered_sentence.append(word)
+		filtered_sentence = pos_tag(filtered_sentence)
+		chunked = nltk.ne_chunk(filtered_sentence)
+		for chunk in chunked:
+			print(chunk)
+		
+		winner = ""
+		for chunk in chunked.subtrees(filter=lambda t: t.label()=='PERSON'):
+			for item in chunk.subtrees():
+				for word in item.leaves():
+					winner += word[0] + ' '
+			break
+		winner = winner.strip()
 
 		
-		if(('win' in tweet or 'Congratulations' in tweet) and award_guess != None):
-			words = word_tokenize(tweet)
-			filtered_sentence = []
-			for word in words:
-				if word == 'https':
-					break
-				filtered_sentence.append(word)
-			filtered_sentence = pos_tag(filtered_sentence)
-			chunked = nltk.ne_chunk(filtered_sentence)
-			
-			winner = ""
-			for chunk in chunked.subtrees(filter=lambda t: t.label()=='PERSON'):
-				for item in chunk.subtrees():
-					for word in item.leaves():
-						winner += word[0] + ' '
-				break
-			winner = winner.strip()
 
-			
+		check = True
+		for word in name_stop_words:
+			if(word in winner):
+				check = False
+		
 
-			check = True
-			for word in name_stop_words:
-				if(word in winner):
-					check = False
-			
+		print(award_guess.name)
+		print(winner)
+		print(tweet)
 
-			print(award_guess.name)
-			print(winner)
-			print(tweet)
-			print('\n')
+		# nlp = spacy.load('en')
+		# print('NOUNS:')
+		# doc = nlp(tweet)
+		# for noun in doc.noun_chunks:
+		# 	print('{}: {}: {}'.format(noun.text,noun.root.head.text,noun.root.text))
+		# print('ENTS:')
+		# for ent in doc.ents:
+		# 	print('{}: {}'.format(ent.text,ent.label_))
 
-			# winner = winner.encode('utf-8')
-			if(check and winner != ""):
-				if(winner in award_guess.winner_votes):
-					award_guess.winner_votes[winner] += 1
-				else:
-					award_guess.winner_votes[winner] = 1
-					
-					# print('Cur:{}'.format(winner))
-					# print('Prev:{}'.format(prev))
-					# if(prev == winner):
-					# 	print('overlap')
-					# else:
-					# 	print('no overlap')
-					# print('\n')
-					# prev = winner
-					
+		# print('\n')
+
+		if(check and winner != ""):
+			if(winner in award_guess.winner_votes):
+				award_guess.winner_votes[winner] += 1
+			else:
+				award_guess.winner_votes[winner] = 1
 
 
+# Loops through award objects and looks at the voting lists for each award and picks the appropriate winner with most votes
+# Then prints results for each award
+def get_results():
 	for award in Award_list:
 		max_votes = 0
 		for person,val in award.winner_votes.items():
@@ -153,139 +173,11 @@ def analyze(tweets):
 		award.print_award()
 
 
-	# stop_words = stopwords.words('english')
-	# stop_words = ['-',':']
-	# stop_words = []
-	# chunk = r"""Award: {<Category><Subcategory>*}
-	# 			Category: {<:>*<JJS><NN.?>+}
-	# 			Subcategory: {<:>*<IN><DT><JJ>*<NN.?>+(<CC><DT>*<JJ>*<NN.?>+)*}
-	# 			Subsubcategory: {(<:>*<JJ.?><CC><DT>*<JJ>*<NN.?>+)}"""
-				
-
-	# chunk_parser = nltk.RegexpParser(chunk)
-	# nlp = spacy.load('en')
-	# for tweet in tweets:
-	# 	if('win' in tweet or 'Congratulations' in tweet):
-		# if('Sterling' in tweet):
-		# if(award in tweet and subcategory in tweet):
-		# if(True):
-			# doc = nlp(tweet)
-
-
-			# for ent in doc.ents:
-			# 	print('{}: {}: {}'.format(ent,ent.label,ent.label_))
-
-			# doc_comp = nlp(u"Kirk Willens wins the Golden Globe for Best Actor in a TV series")
-			# award_comp1 = nlp(u"Best Actor in a TV series")
-
-			# if(doc.similarity(doc_comp)>0.75):
-				# print(doc)
-				# print('ENTS:')
-				# for ent in doc.ents:
-				# 	print('{}: {}'.format(ent.text,ent.label_))
-				# print('NOUNS:')
-			# for noun in doc.noun_chunks:
-			# 	print('{}: {}: {}'.format(noun.text,noun.root.head.text,noun.root.text))
-			# print('\n')
-
-			# # if(doc.similarity(doc_comp)>0.75):
-
-			# people = []
-			# for ent in doc.ents:
-			# 	if(ent.label_ == 'PERSON'):
-			# 		people.append(ent.text)
-			
-
-			# winner = 'None'
-			# award = 'None'
-			# category = 'None'
-			# subcategory = 'None'
-			# for index,noun in enumerate(doc.noun_chunks):
-			# 	dep_word = noun.root.head.text
-			# 	if('win' in dep_word):
-			# 		if(noun.text in people):
-			# 			winner = noun.text
-			# 		else:
-			# 			award = noun.text
-			# 	elif('to' in dep_word):
-			# 		if(noun.text in people):
-			# 			winner = noun.text
-			# 	elif('for' in dep_word and award=='None'):
-			# 		award = noun.text
-			# 	elif('by' in dep_word):
-			# 		category = noun.text
-			# 		if(award=='None'):
-			# 			try:
-			# 				award = noun[index-1].text
-			# 			except:
-			# 				award = 'None'
-			# 	elif('in' in noun.root.head.text):
-			# 		subcategory = noun.text
-
-			# if(winner == 'None'):
-			# 	try:
-			# 		winner = people[0]
-			# 	except:
-			# 		winner = 'None'
-
-			# if(winner != 'None' and award != 'None'):
-			# 	award_name = award
-			# 	if(category != 'None'):
-			# 		award_name += ' by ' + category
-			# 	if(subcategory != 'None'):
-			# 		award_name += ' in ' + subcategory
-
-			# 	max_sim = 0
-			# 	award_guess = ''
-			# 	# award_doc = nlp(award_name)
-			# 	# for mAward in mAwards:
-			# 	# 	sim = award_doc.similarity(nlp(mAward))
-			# 	# 	if(sim>max_sim):
-			# 	# 		max_sim = sim
-			# 	# 		award_guess = mAward
-			# 	# for tAward in tAwards:
-			# 	# 	sim = award_doc.similarity(nlp(tAward))
-			# 	# 	if(sim>max_sim):
-			# 	# 		max_sim = sim
-			# 	# 		award_guess = tAward
-				
-
-			# 	# if(max_sim>0):
-			# 	if(1):
-			# 		print('PERSON: {}'.format(winner))
-			# 		# print('AWARD GUESS: {} '.format(award_guess))
-			# 		print('AWARD: {}'.format(award_name))
-			# 		# print('SUBCATEGORY: {}'.format(subcategory))
-			# 		print(doc)
-			# 		print('\n')
-			
-
-
-
-			# filtered_sentence = []
-			# words = word_tokenize(tweet)
-			# for word in words:
-			# 	if word == 'https':
-			# 		break
-			# 	if word not in stop_words:
-			# 		filtered_sentence.append(word)
-			# filtered_sentence = pos_tag(filtered_sentence)
-			# chunked = chunk_parser.parse(filtered_sentence)
-			# for chunk in chunked:
-			# 	print(chunk)
-			# chunked.draw()
-			# chunked = nltk.ne_chunk(filtered_sentence)
-			# for chunk in chunked:
-			# 	print(chunk)
-			# chunked.draw()
-			# print('{}\n'.format(chunked))
-			# break;
-
 
 def main():
 	init_awards()
-	tweets = readtweets()
-	analyze(tweets)
+	analyze_tweets('gg2018.json')
+	get_results()
 
 
 if __name__ == "__main__":

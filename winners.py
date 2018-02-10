@@ -35,6 +35,7 @@ class Award:
 		print('Presented By: {}'.format(self.presenter))
 		print('Nominees: {}'.format(', '.join(self.nominees)))
 		print('Winner: {}\n'.format(self.winner))
+		# print('Winner votes: {}\n'.format(self.winner_votes))
 
 
 def init_awards():
@@ -50,12 +51,12 @@ def readtweets():
 	tweets_list = []
 	with open('gg2018.json') as data_file:
 		tweets = json.load(data_file)
-		for i in range(500000,501000):
-			tweets_list.append(tweets[i]['text'])
+		# for i in range(500000,510000):
+		# 	tweets_list.append(tweets[i]['text'])
 			# print(tweets[i]['text'])
 			# print('\n')
-		# for tweet in tweets:
-		# 	tweets_list.append(tweet['text'])
+		for tweet in tweets:
+			tweets_list.append(tweet['text'])
 	return tweets_list
 
 
@@ -147,6 +148,7 @@ def analyze(tweets):
 		for person,val in award.winner_votes.items():
 			if(val>max_votes):
 				award.winner = person
+				max_votes = val
 
 		award.print_award()
 

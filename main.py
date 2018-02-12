@@ -46,20 +46,20 @@ ignore_list = ['golden', 'globes', 'globe', 'goldenglobes', '#goldenglobes', 'os
 def findWinner(tweetsList):
     for i in range(0, 1000):
         if "Congratulations to" in tweetsList[i]:
-            print tweetsList[i]
-    print "done"
+            print(tweetsList[i])
+    print("done")
 
 
 # function to find nominees, given keywords that relate to a category
 def findNominee(keywords, tweets):
-    print "entered findNominee"
+    print("entered findNominee")
     relevantList = relevantTweets(keywords, tweets)
     nomineeList = {}
     accurateList = []
     for tweet in relevantList:
         # print "a tweet is ", tweet
         tweetUnigram = tweet.split()
-        tweetUnigram = [u.encode('utf-8') for u in tweetUnigram]
+        # tweetUnigram = [u.encode('utf-8') for u in tweetUnigram]
         tweetUnigram = pos_tag(tweetUnigram)
         pnoun = nltk.ne_chunk(tweetUnigram)
         pnoun.draw()
@@ -68,7 +68,7 @@ def findNominee(keywords, tweets):
         #     # print 'tag is ', tag
         #     if tag == 'NNP':
         #         pnoun.append(word)
-        print "pnoun list is ", pnoun
+        print("pnoun list is ", pnoun)
         for unigram in tweetUnigram:
             # idea is find an at to the nominee
             if nomineeList.has_key(unigram):
@@ -84,7 +84,7 @@ def findNominee(keywords, tweets):
         if nomineeList[nominee] > threshold:
             accurateList.append(nominee)
         else:
-            print "ignored ", nominee
+            print("ignored ", nominee)
 
     return accurateList
 
@@ -132,7 +132,7 @@ def main():
     nomineeToFind = mAward1
     if nomineeToFind == mAward1:
         keywords = ['best', 'motion', 'picture', 'drama']
-        print findNominee(keywords, tweetsList)
+        print(findNominee(keywords, tweetsList))
 
 
 if __name__ == "__main__":

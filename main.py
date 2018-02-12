@@ -69,6 +69,8 @@ def findNominee(keywords, tweets):
                 else:
                     nominee_hits[name] = 0
 
+    nominee_hits = {name: nominee_hits[name] for name in nominee_hits if not _in_any(keywords, name)}
+
     hits = []
     for n in nominee_hits:
         hits.append(nominee_hits[n])
@@ -117,6 +119,12 @@ def relevantTweets(keywords, tweetList):
     # TODO: filter duplicates
     return list(set(relevantList))
 
+# helper function for findNominee()
+def _in_any(keywords, name):
+    for keyword in keywords:
+        if keyword in name.lower():
+            return True
+    return False
 
 def main():
     tweetsList = readTweets()

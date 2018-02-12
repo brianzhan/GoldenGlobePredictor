@@ -200,9 +200,9 @@ def get_results():
 
 	# Finds the person who got the most votes in the winner votes dictionary and sets the award winner to be that person
 	for award in Award_list:
-		award.testwinner = dict(Counter(award.winner_votes).most_common(1))
+		[(award.winner,max_votes)] = dict(Counter(award.winner_votes).most_common(1)).items()
 		award.nominees = dict(Counter(award.winner_votes).most_common(5))
-		[(award.winner, max_votes)]= award.testwinner.items()
+		# [(award.winner, max_votes)]= award.testwinner.items()
 		award.print_award()
 
 

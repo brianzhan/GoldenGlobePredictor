@@ -4,6 +4,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.tag import pos_tag
 import time
+from collections import Counter
 
 
 # Motion Picture Awards
@@ -108,7 +109,7 @@ def analyze(tweet):
 			count = 0
 			check = True
 			for word in award.filtered_sentence:
-				word_lowercase = word.lower()
+				word_lowercase = word.lower()	
 				if word_lowercase not in tweet_lowercase and (word_lowercase not in abbreviations or abbreviations[word_lowercase] not in tweet_lowercase):
 					check = False
 				else:
@@ -142,7 +143,7 @@ def analyze(tweet):
 						winner += word[0] + ' '
 				break
 			winner = winner.strip()
-			print('First Guess: {}'.format(winner))
+			# print('First Guess: {}'.format(winner))
 
 			# If the Named Entity Recognition from NLTK doesn't work then find next best possible name
 			# Assuming an award is given 'to' someone, then concatenate all captialized words after 'to' if in the tweet
@@ -150,7 +151,7 @@ def analyze(tweet):
 			if(check == False or winner == ''):
 				winner = ''
 				i = None
-				print(filtered_sentence)
+				# print(filtered_sentence)
 				for index,word in enumerate(filtered_sentence):
 					if(word == 'to'):
 						i = index + 1
@@ -165,12 +166,12 @@ def analyze(tweet):
 						winner += filtered_sentence[i] + ' '
 						i += 1
 					winner = winner.strip()
-					print('Second Guess: {}'.format(winner))		
+			# 		print('Second Guess: {}'.format(winner))		
 
-			print(award_guess.name)
-			print(winner)
-			print(tweet)
-			print('\n')
+			# print(award_guess.name)
+			# print(winner)
+			# print(tweet)
+			# print('\n')
 
 			# If we found a potential winner, then add 1 to the awards winner dictionary with the person's name as the key
 			# If that person's name is not in the dictionary yet then initialize it with a count of 1
@@ -199,14 +200,10 @@ def get_results():
 
 	# Finds the person who got the most votes in the winner votes dictionary and sets the award winner to be that person
 	for award in Award_list:
-		max_votes = 0
-		for person,val in award.winner_votes.items():
-			if(val>max_votes):
-				award.winner = person
-				max_votes = val
-
+		award.testwinner = dict(Counter(award.winner_votes).most_common(1))
+		award.nominees = dict(Counter(award.winner_votes).most_common(5))
+		[(award.winner, max_votes)]= award.testwinner.items()
 		award.print_award()
-
 
 
 def main():

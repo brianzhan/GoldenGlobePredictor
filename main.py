@@ -62,16 +62,16 @@ def findNominee(keywords, tweets):
         # tweetUnigram = [u.encode('utf-8') for u in tweetUnigram]
         tweetUnigram = pos_tag(tweetUnigram)
         pnoun = nltk.ne_chunk(tweetUnigram)
-        pnoun.draw()
+        # pnoun.draw()
         #
         # for word, tag in taggedTweets:
         #     # print 'tag is ', tag
         #     if tag == 'NNP':
         #         pnoun.append(word)
-        print("pnoun list is ", pnoun)
+        print(pnoun)
         for unigram in tweetUnigram:
             # idea is find an at to the nominee
-            if nomineeList.has_key(unigram):
+            if unigram in nomineeList:
                 nomineeList[unigram] += 1
             else:
                 nomineeList[unigram] = 1
@@ -96,7 +96,8 @@ def readTweets():
         tweets = json.load(data_file)
         for i in range(len(tweets)):
             tweet = tweets[i]['text']
-            tweet = tweet.lower()  # convert to lower so our searches aren't case sensitive
+            # instead of converting to lower here, do it in search. I think the caps helps nltk find NEs.
+            # tweet = tweet.lower()  # convert to lower so our searches aren't case sensitive
             tweetsList.append(tweet)
             # print(tweets[0]['text'])
     return tweetsList
@@ -110,7 +111,7 @@ def findMatches(tweet, keywords):
     if tweet.startswith('rt @'):
         tweet = tweet[tweet.find(':') + 1:]
     for word in keywords:
-        if word not in tweet:
+        if word.lower() not in tweet.lower():
             return False
     return True
 

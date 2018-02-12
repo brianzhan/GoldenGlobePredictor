@@ -52,39 +52,30 @@ def findWinner(tweetsList):
 
 # function to find nominees, given keywords that relate to a category
 def findNominee(keywords, tweets):
-    print("entered findNominee")
-    relevantList = relevantTweets(keywords, tweets)
-    nomineeList = {}
-    accurateList = []
-    for tweet in relevantList:
-        # print "a tweet is ", tweet
-        tweetUnigram = tweet.split()
-        # tweetUnigram = [u.encode('utf-8') for u in tweetUnigram]
-        tweetUnigram = pos_tag(tweetUnigram)
-        pnoun = nltk.ne_chunk(tweetUnigram)
-        # pnoun.draw()
-        #
-        # for word, tag in taggedTweets:
-        #     # print 'tag is ', tag
-        #     if tag == 'NNP':
-        #         pnoun.append(word)
-        print(pnoun)
-        for unigram in tweetUnigram:
-            # idea is find an at to the nominee
-            if unigram in nomineeList:
-                nomineeList[unigram] += 1
-            else:
-                nomineeList[unigram] = 1
+    relevant_tweets = relevantTweets(keywords, tweets)
+    nominee_hits = {}
 
-    list_ = [nomineeList[n] for n in nomineeList]
-    list_.sort(reverse=True)
-    threshold = list_[10]
+    for tweet in relevant_tweets:
+        unigram = pos_tag(tweet.split())
+        chunk = nltk.ne_chunk(unigram)
 
-    for nominee in nomineeList:
-        if nomineeList[nominee] > threshold:
-            accurateList.append(nominee)
-        else:
-            print("ignored ", nominee)
+        for entity in chunk:
+            if not isinstance(entity, tuple) and entity.label() == "PERSON":
+                name = ""
+                for sub_entity in entity:
+                    name += sub_entity[0]
+                if name in nominee_hits:
+                    nominee_hits[name] += 1
+                else:
+                    nominee_hits[name] = 0
+
+    hits = []
+    for n in nominee_hits:
+        hits.append(nominee_hits[n])
+    hits.sort(reverse=True)
+    threshold = hits[10 if len(hits) > 10 else len(hits) - 1]
+
+    accurateList = [nominee_name for nominee_name in nominee_hits if nominee_hits[nominee_name] > threshold]
 
     return accurateList
 
@@ -132,7 +123,7 @@ def main():
     # find nominees
     nomineeToFind = mAward1
     if nomineeToFind == mAward1:
-        keywords = ['best', 'motion', 'picture', 'drama']
+        keywords = ['best', 'performance', 'television', 'drama']
         print(findNominee(keywords, tweetsList))
 
 

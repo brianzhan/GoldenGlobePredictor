@@ -5,6 +5,7 @@ from nltk.corpus import stopwords
 from nltk.tag import pos_tag
 import time
 from difflib import SequenceMatcher
+from collections import Counter
 
 
 # Motion Picture Awards
@@ -22,6 +23,8 @@ abbreviations = {'television':'tv'}
 
 # Dictionary of keywords and what category they correspond to
 keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,' introduc':2,'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
+# keywords_dict = {'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
+
 
 # Dictionary of categories and the title they refer to
 category_dict = {1:'Winner',2:'Presenters',3:'Best Speech',4:'Best Dressed',5:'Worst Dressed'}
@@ -255,11 +258,14 @@ def get_results():
 
 	# Finds the person who got the most votes in the winner votes dictionary and sets the award winner to be that person
 	for award in Award_list:
-		max_votes = 0
-		for person,val in award.voting_dict[1].items():
-			if(val>max_votes):
-				award.winner = person
-				max_votes = val
+		if(award.voting_dict[1]!= {}):
+			[(award.winner,max_votes)] = dict(Counter(award.voting_dict[1]).most_common(1)).items()
+
+		# max_votes = 0
+		# for person,val in award.voting_dict[1].items():
+		# 	if(val>max_votes):
+		# 		award.winner = person
+		# 		max_votes = val
 		award.print_award()
 
 	print("Bonus Information:\n")
@@ -268,12 +274,15 @@ def get_results():
 		Bonus_Info[category] = resolve_voting_dict(bonus_dict)
 
 	for category,bonus_dict in Bonus_Info.items():
-		max_votes = 0
-		entity = ''
-		for person,val in bonus_dict.items():
-			if(val>max_votes):
-				entity = person
-				max_votes = val
+		if(bonus_dict != {}):
+			[(entity,max_votes)] = dict(Counter(bonus_dict).most_common(1)).items()
+
+		# max_votes = 0
+		# entity = ''
+		# for person,val in bonus_dict.items():
+		# 	if(val>max_votes):
+		# 		entity = person
+		# 		max_votes = val
 		print('{}: {}'.format(category_dict[category],entity))
 
 

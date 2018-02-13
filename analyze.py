@@ -27,7 +27,7 @@ keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,' introdu
 
 
 # Dictionary of categories and the title they refer to
-category_dict = {1:'Winner',2:'Presenters',3:'Best Speech',4:'Best Dressed',5:'Worst Dressed'}
+category_dict = {1:'Winner',2:'Presenters',3:'Best Speech',4:'Best Dressed',5:'Worst Dressed',6:'Nominees'}
 
 # List of Award objects that hold information about each award
 Award_list = []

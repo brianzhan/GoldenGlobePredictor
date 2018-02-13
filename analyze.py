@@ -259,7 +259,14 @@ def get_results():
 	# Finds the person who got the most votes in the winner votes dictionary and sets the award winner to be that person
 	for award in Award_list:
 		if(award.voting_dict[1]!= {}):
+			possibleNominee = []
 			[(award.winner,max_votes)] = dict(Counter(award.voting_dict[1]).most_common(1)).items()
+			for n,v in dict(Counter(award.voting_dict[1]).most_common(5)).items():
+				possibleNominee.append(n)
+			award.nominees = possibleNominee
+			# print("possible nominee is", possibleNominee)
+
+
 
 	print("Bonus Information:\n")
 

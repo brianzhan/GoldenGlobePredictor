@@ -46,45 +46,38 @@ ignore_list = ['golden', 'globes', 'globe', 'goldenglobes', '#goldenglobes', 'os
 def findWinner(tweetsList):
     for i in range(0, 1000):
         if "Congratulations to" in tweetsList[i]:
-            print tweetsList[i]
-    print "done"
+            print(tweetsList[i])
+    print("done")
 
 
 # function to find nominees, given keywords that relate to a category
 def findNominee(keywords, tweets):
-    print "entered findNominee"
-    relevantList = relevantTweets(keywords, tweets)
-    nomineeList = {}
-    accurateList = []
-    for tweet in relevantList:
-        # print "a tweet is ", tweet
-        tweetUnigram = tweet.split()
-        tweetUnigram = [u.encode('utf-8') for u in tweetUnigram]
-        tweetUnigram = pos_tag(tweetUnigram)
-        pnoun = nltk.ne_chunk(tweetUnigram)
-        pnoun.draw()
-        #
-        # for word, tag in taggedTweets:
-        #     # print 'tag is ', tag
-        #     if tag == 'NNP':
-        #         pnoun.append(word)
-        print "pnoun list is ", pnoun
-        for unigram in tweetUnigram:
-            # idea is find an at to the nominee
-            if nomineeList.has_key(unigram):
-                nomineeList[unigram] += 1
-            else:
-                nomineeList[unigram] = 1
+    relevant_tweets = relevantTweets(keywords, tweets)
+    nominee_hits = {}
 
-    list_ = [nomineeList[n] for n in nomineeList]
-    list_.sort(reverse=True)
-    threshold = list_[10]
+    for tweet in relevant_tweets:
+        unigram = pos_tag(tweet.split())
+        chunk = nltk.ne_chunk(unigram)
 
-    for nominee in nomineeList:
-        if nomineeList[nominee] > threshold:
-            accurateList.append(nominee)
-        else:
-            print "ignored ", nominee
+        for entity in chunk:
+            if not isinstance(entity, tuple) and entity.label() == "PERSON":
+                name = ""
+                for sub_entity in entity:
+                    name += sub_entity[0]
+                if name in nominee_hits:
+                    nominee_hits[name] += 1
+                else:
+                    nominee_hits[name] = 0
+
+    nominee_hits = {name: nominee_hits[name] for name in nominee_hits if not _in_any(keywords, name)}
+
+    hits = []
+    for n in nominee_hits:
+        hits.append(nominee_hits[n])
+    hits.sort(reverse=True)
+    threshold = hits[10 if len(hits) > 10 else len(hits) - 1]
+
+    accurateList = [nominee_name for nominee_name in nominee_hits if nominee_hits[nominee_name] > threshold]
 
     return accurateList
 
@@ -96,7 +89,8 @@ def readTweets():
         tweets = json.load(data_file)
         for i in range(len(tweets)):
             tweet = tweets[i]['text']
-            tweet = tweet.lower()  # convert to lower so our searches aren't case sensitive
+            # instead of converting to lower here, do it in search. I think the caps helps nltk find NEs.
+            # tweet = tweet.lower()  # convert to lower so our searches aren't case sensitive
             tweetsList.append(tweet)
             # print(tweets[0]['text'])
     return tweetsList
@@ -110,7 +104,7 @@ def findMatches(tweet, keywords):
     if tweet.startswith('rt @'):
         tweet = tweet[tweet.find(':') + 1:]
     for word in keywords:
-        if word not in tweet:
+        if word.lower() not in tweet.lower():
             return False
     return True
 
@@ -125,14 +119,20 @@ def relevantTweets(keywords, tweetList):
     # TODO: filter duplicates
     return list(set(relevantList))
 
+# helper function for findNominee()
+def _in_any(keywords, name):
+    for keyword in keywords:
+        if keyword in name.lower():
+            return True
+    return False
 
 def main():
     tweetsList = readTweets()
     # find nominees
     nomineeToFind = mAward1
     if nomineeToFind == mAward1:
-        keywords = ['best', 'motion', 'picture', 'drama']
-        print findNominee(keywords, tweetsList)
+        keywords = ['best', 'performance', 'television', 'drama']
+        print(findNominee(keywords, tweetsList))
 
 
 if __name__ == "__main__":

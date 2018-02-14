@@ -251,6 +251,7 @@ def resolve_voting_dict(voting_dict):
 # Loops through award objects and looks at the voting lists for each award and picks the appropriate winner with most votes
 # Then prints results for each award
 def get_results():
+	print("\n Printing Final Results \n")
 
 	for award in Award_list:
 		for category,voting_dict in award.voting_dict.items():
@@ -265,6 +266,7 @@ def get_results():
 				possibleNominee.append(n)
 			award.nominees = possibleNominee
 			# print("possible nominee is", possibleNominee)
+		award.print_award()
 
 
 

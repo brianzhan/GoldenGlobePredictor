@@ -1,0 +1,161 @@
+Award: Best Motion Picture - Drama
+Presented By: 
+Nominees: Billboards Outside Ebbing, Missouri, Globes, Which, Dunkirk SHOULD BE Call Me By Your Name, Dunkirk, The Post, The Shape of Water
+Presenter votes: {'DakotaJohnson': 9, 'SalmaHayek': 71}
+Winner: Billboards Outside Ebbing
+
+Award: Best Motion Picture - Musical or Comedy
+Presented By: 
+Nominees: Lady Bird, Greta Gerwig, Which, James, Get Out SHOULD BE The Disaster Artist, Get Out, The Greatest Showman, I Tonya
+Presenter votes: {'Alicia Vikander': 9, 'Michael Keaton': 6, 'ZacEfron': 1, 'Sethrogen': 7, 'AllisonJanney': 5, 'Sebastian Stan': 1}
+Winner: Lady Bird
+
+Award: Best Director
+Presented By: 
+Nominees: Guillermo Del Toro, Barbra Streisand, Lady Bird, James Franco, Water SHOULD BE Martin McDonagh, Christopher Nolan, Ridley Scott, Steven Spielberg
+Presenter votes: {'Natalie Portman': 1121, 'Daaaamn': 1, 'Ron Howard': 2412, 'GoldenGlobes': 17, 'Oprah': 29, 'Guillermo': 45, 'Toro': 45, 'KrisLovesMina': 1}
+Winner: Guillermo Del Toro
+
+Award: Best Actor - Motion Picture Drama
+Presented By: 
+Nominees: Gary Oldman, Sirius Black, Timothée Chalamet, Darkest Hour, Gary Oldham SHOULD BE Timothee Chalamet, Daniel Day-Lewis, Tom Hanks, Denzel Washington
+Presenter votes: {'Susan Sarandon': 5, 'Geena Davis': 5}
+Winner: Gary Oldman
+
+Award: Best Actor - Motion Picture Musical or Comedy
+Presented By: 
+Nominees: James Franco, Mark, Perez Hilton, Ronan
+Presenter votes: {'Shirley MacLaine': 2} SHOULD BE Steve Carell, Ansel Elgort, Hugh Jackman, Daniel Kaluuya
+Winner: James Franco
+
+Award: Best Actress - Motion Picture Drama
+Presented By: 
+Nominees: Frances McDormand, Gary Oldman, Allison Janney, Missouri, Nicole Kidman SHOULD BE Jessica Chastain, Sally Hawkins, Meryl Streep, Michelle Williams
+Presenter votes: {'AngelinaJolie': 1}
+Winner: Frances McDormand
+
+Award: Best Actress - Motion Picture Musical or Comedy
+Presented By: 
+Nominees: Saoirse Ronan, Rachel Brosnahan, Lady, Emma Stone, Nicole Kidman SHOULD BE Jessica Chastain, Sally Hawkins, Meryl Streep, Michelle Williams
+Presenter votes: {}
+Winner: Saoirse Ronan
+
+Award: Best Supporting Actor - Motion Picture
+Presented By: 
+Nominees: Sam Rockwell, Alexander Skarsgård, Winner, Billboards Outside Ebbing, Globes SHOULD BE 
+Presenter votes: {'Announce': 1}
+Winner: Sam Rockwell
+
+Award: Best Supporting Actress - Motion Picture
+Presented By: 
+Nominees: Allison Janney, Laura Dern, Alison
+Presenter votes: {} SHOULD BE Mary Blige, Hong Chau, Laurie Metcalf, Octavia Spencer
+Winner: Allison Janney
+
+Award: Best Screenplay
+Presented By: 
+Nominees: Martin McDonagh, Billboards Outside Ebbing, Missouri, Nico_Lang, Lady Bird SHOULD BE Gulliermo del Toro & Vanessa Taylor, Greta Gerwig, Lizz Hannah, Josh Singer
+Presenter votes: {'GoldenGlobes': 1, 'Catherine Zeta-Jones': 129, 'Kirk Douglas': 129}
+Winner: Martin McDonagh
+
+Award: Best Original Score
+Presented By: 
+Nominees: Alexandre Desplat, Water, Dunkirk, Globes, Zimmer SHOULD BE Cartel Burwell, Jonny Greenwood, John wIlliams, Hans Zimmer
+Presenter votes: {'MariahCarey': 42, 'HugoGloss': 1, 'GoldenGlobes': 2}
+Winner: Alexandre Desplat
+
+Award: Best Foreign Language Film
+Presented By: 
+Nominees: In The Fade, Fatih Akin, Globes, 'In, Diane Kruger SHOULD BE A Fantastic Woman, First They Killed My Father, Loveless, The Square
+Presenter votes: {}
+Winner: In The Fade
+
+Award: Best Animated Feature Film
+Presented By: 
+Nominees: Coco, Globes, Pixar SHOULD BE The Boss Baby, Thre Breadwinner, Ferdinand, Loving Vincent
+Presenter votes: {}
+Winner: Coco
+
+Award: Cecil B. DeMille Lifetime Achievement Award
+Presented By: 
+Nominees: Oprah Winfrey, Reese Witherspoon
+Presenter votes: {'ReeseWitherspoon': 1}
+Winner: Oprah Winfrey
+
+Award: Best Original Song
+Presented By: 
+Nominees: Benj Pasek, Me, Mariah Carey, Coco, Globes SHOULD BE Nick Jonas, Justin Tranter, & Nick Monson, Raphael Saadiq, Mary Bilge, Taura Stinson, KRisten Anderson-Lopex and Robert Lopez, Mariah Carey and Marc Shaiman
+Presenter votes: {'Kelly': 2}
+Winner: Benj Pasek
+
+Award: Best Drama Series
+Presented By: 
+Nominees: The Handmaid 's Tale, Elisabeth Moss, Hulu, Margaret Atwood, Freddie Highmore SHOULD BE The Crown ,Game of Thrones, Stranger Things, This Is Us
+Presenter votes: {'John Goodman': 62}
+Winner: The Handmaid 's Tale
+
+Award: Best Comedy Series
+Presented By: 
+Nominees: The Marvelous Mrs. Maisel, Aziz Ansari, Amazon, Will Win
+Presenter votes: {'Khaleesi': 2, 'Jon Snow': 2}
+Winner: The Marvelous Mrs. Maisel
+
+Award: Best Actor in a Television Drama Series
+Presented By: 
+Nominees: Sterling K. Brown, Black
+Presenter votes: {}
+Winner: Sterling K. Brown
+
+Award: Best Actor in a Television Comedy Series
+Presented By: 
+Nominees: Aziz Ansari SHOULD BE Anthony Anderosn, Kevin Bacon, William H Macy, Eric McCormack
+Presenter votes: {}
+Winner: Aziz Ansari
+
+Award: Best Actress in a Television Drama Series
+Presented By: 
+Nominees: Elisabeth Moss, Elizabeth, Maggie Gyllenhaal Who Will Win, Perez Hilton SHOULD BE 
+Presenter votes: {}
+Winner: Elisabeth Moss
+
+Award: Best Actress in a Television Comedy Series
+Presented By: 
+Nominees: Rachel Brosnahan, Marvelous
+Presenter votes: {}
+Winner: Rachel Brosnahan
+
+Award: Best Limited Series or Motion Picture made for Television
+Presented By: 
+Nominees: Little Lies, Laura Dern, Nicole Kidman, Ewan McGregor, Alexander
+Presenter votes: {'Dwayne Johnson': 1, 'Emma': 19, 'Robert': 19}
+Winner: Little Lies
+
+Award: Best Actor in a Limited Series made for Television
+Presented By: 
+Nominees: Ewan McGregor, Fargo, Kyle MacLachlan
+Presenter votes: {}
+Winner: Ewan McGregor
+
+Award: Best Actress in a Limited Series made for Television
+Presented By: 
+Nominees: Nicole Kidman
+Presenter votes: {'GalGadot': 2}
+Winner: Nicole Kidman
+
+Award: Best Supporting Actor in a Limited Series made for Television
+Presented By: 
+Nominees: Alexander Skarsgård SHOULD BE David Harbour, Alfred Molina,Christian Slater, David Thewlis
+Presenter votes: {}
+Winner: Alexander Skarsgård
+
+Award: Best Supporting Actress in a Limited Series made for Television
+Presented By: 
+Nominees: Laura Dern
+Presenter votes: {} SHOULD BE Allison Janney, Mary Bilge, Hong Chau, Laurie Metcalf, Octavia Spencer
+Winner: Laura Dern
+
+Bonus Information:
+
+Best Speech: Oprah
+Best Dressed: Allison Janney
+Worst Dressed: Allison Williams

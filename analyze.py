@@ -11,7 +11,7 @@ from collections import Counter
 # Motion Picture Awards
 mAwards = ['Best Motion Picture - Drama','Best Motion Picture - Musical or Comedy','Best Director','Best Actor - Motion Picture Drama','Best Actor - Motion Picture Musical or Comedy',
 'Best Actress - Motion Picture Drama','Best Actress - Motion Picture Musical or Comedy','Best Supporting Actor - Motion Picture','Best Supporting Actress - Motion Picture',
-'Best Screenplay','Best Original Score','Best Foreign Language Film','Best Animated Feature Film','Cecil B. DeMille Lifetime Achievement Award']
+'Best Screenplay','Best Original Score','Best Foreign Language Film','Best Animated Feature Film','Cecil B. DeMille Lifetime Achievement Award', 'Best Original Song']
 
 # Television Awards
 tAwards = ['Best Drama Series','Best Comedy Series','Best Actor in a Television Drama Series','Best Actor in a Television Comedy Series','Best Actress in a Television Drama Series',
@@ -22,7 +22,8 @@ tAwards = ['Best Drama Series','Best Comedy Series','Best Actor in a Television 
 abbreviations = {'television':'tv'}
 
 # Dictionary of keywords and what category they correspond to
-keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,' introduc':2,'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
+keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
+# keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,' introduc':2,'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
 # keywords_dict = {'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
 
 
@@ -209,6 +210,24 @@ def find_named_entities(tweet, category):
 				i += 1
 			entity = entity.strip()
 			if(check == True and entity != ''):
+				entity_list.append(entity)
+
+	if (category == 2 and entity_list == []):
+		entity = ''
+		i = None
+		for index,word in enumerate(filtered_sentence):
+			if (word == '@' and filtered_sentence[index-1] != 'RT'):
+				i = index + 1 
+				break
+			if (word == '#'):
+				i = index + 1
+				break
+
+		if (i != None):
+			if (filtered_sentence[i].lower() not in Award_words):
+				entity = filtered_sentence[i]
+			entity = entity.strip()
+			if entity != '':
 				entity_list.append(entity)
 
 	return entity_list

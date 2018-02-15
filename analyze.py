@@ -22,13 +22,13 @@ tAwards = ['Best Drama Series','Best Comedy Series','Best Actor in a Television 
 abbreviations = {'television':'tv'}
 
 # Dictionary of keywords and what category they correspond to
-keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
+keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,'nominee':3,'nominated':3,'best speech':4,'best dress':5,'best look':5,'worst dress':6,'worst look':6}
 # keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,' introduc':2,'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
 # keywords_dict = {'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
 
 
 # Dictionary of categories and the title they refer to
-category_dict = {1:'Winner',2:'Presenters',3:'Best Speech',4:'Best Dressed',5:'Worst Dressed',6:'Nominees'}
+category_dict = {1:'Winner',2:'Presenters',3:'Nominees',4:'Best Speech',5:'Best Dressed',6:'Worst Dressed'}
 
 # List of Award objects that hold information about each award
 Award_list = []
@@ -37,7 +37,7 @@ Award_list = []
 Award_words = set()
 
 # A list of voting dictionaries for info that does not relate to a an award (Example: Best Dressed)
-Bonus_Info = {3:{},4:{},5:{}}
+Bonus_Info = {4:{},5:{},6:{}}
 
 class Award:
 
@@ -52,7 +52,7 @@ class Award:
 	def print_award(self):
 		print('Award: {}'.format(self.name))
 		print('Presented By: {}'.format(self.presenter))
-		print('Nominees: {}'.format(', '.join(self.nominees)))
+		print('Nominees: {}'.format(', '.join(self.voting_dict[3])))
 		# print('Winner votes: {}'.format(self.voting_dict[1]))
 		print('Presenter votes: {}'.format(self.voting_dict[2]))
 		# print('Nominee votes: {}'.format(self.voting_dict[3]))
@@ -65,10 +65,10 @@ def init_awards():
 
 	# Create award objects and add to Award_list
 	for mAward in mAwards:
-		award_obj = Award(mAward,'',[],'',{1:{},2:{}},[])
+		award_obj = Award(mAward,'',[],'',{1:{},2:{},3:{}},[])
 		Award_list.append(award_obj)
 	for tAward in tAwards:
-		award_obj = Award(tAward,'',[],'',{1:{},2:{}},[])
+		award_obj = Award(tAward,'',[],'',{1:{},2:{},3:{}},[])
 		Award_list.append(award_obj)
 
 	# Make a filtered_sentence of key words for each object using stop_words
@@ -100,13 +100,13 @@ def analyze_tweets(filename):
 			# Only execute if the tweet relates to a category
 			if (category > 0):
 				award_guess = None
-				if(category < 3):			
+				if(category < 4): # winner presenter 		
 					award_guess = find_tweet_award(tweet_lowercase)
-				else:
+				else: # bonus
 					for word in category_dict[category].split(' '):
 						Award_words.add(word.lower())
 				# Only execute if the tweet relates to an award
-				if(category > 2 or award_guess != None):
+				if(category > 3 or award_guess != None): # bonus (speech,dress,looking)
 					tweet = full_tweet
 					if(category > 0):
 						tweet = full_tweet.split(keyword)[0]
@@ -114,7 +114,7 @@ def analyze_tweets(filename):
 					if(entity_list != []):
 						print('Tweet Category Guess: {}'.format(category))
 						print('Final Entity Guess: {}'.format(entity_list))
-						if(award_guess == None and category > 2):
+						if(award_guess == None and category > 3):
 							submit_vote_bonus_info(category,entity_list)
 						else:
 							submit_vote(category,award_guess,entity_list)
@@ -192,7 +192,7 @@ def find_named_entities(tweet, category):
 	# If the Named Entity Recognition from NLTK doesn't work then find next best possible name
 	# Assuming an award is given 'to' someone, then concatenate all captialized words after 'to' if in the tweet
 	# If not, then move on to another tweet and ignore this one
-	if(category == 1 and entity_list == []):
+	if((category == 1 or category == 3) and entity_list == []):
 		entity = ''
 		i = None
 		for index,word in enumerate(filtered_sentence):
@@ -281,9 +281,9 @@ def get_results():
 		if(award.voting_dict[1]!= {}):
 			possibleNominee = []
 			[(award.winner,max_votes)] = dict(Counter(award.voting_dict[1]).most_common(1)).items()
-			for n,v in dict(Counter(award.voting_dict[1]).most_common(5)).items():
+			for n,v in dict(Counter(award.voting_dict[3]).most_common(5)).items():
 				possibleNominee.append(n)
-			award.nominees = possibleNominee
+			award.voting_dict[3] = possibleNominee
 			# print("possible nominee is", possibleNominee)
 		award.print_award()
 

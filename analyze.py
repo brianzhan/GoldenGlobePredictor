@@ -7,6 +7,22 @@ import time
 from difflib import SequenceMatcher
 from collections import Counter
 
+import json
+import pandas as pd
+import nltk
+import numpy as np
+from nltk.corpus import stopwords
+
+stop = stopwords.words('english')
+pd.options.display.max_colwidth = 400
+# data = json.load(open('gg2018.json'))
+df = pd.DataFrame(columns = ['text', 'id_str'])
+df = pd.read_json('gg2018.json')
+df['text'] = [str(u) for u in df['text']]
+
+
+
+
 
 # Motion Picture Awards
 mAwards = ['Best Motion Picture - Drama','Best Motion Picture - Musical or Comedy','Best Director','Best Actor - Motion Picture Drama','Best Actor - Motion Picture Musical or Comedy',
@@ -22,7 +38,7 @@ tAwards = ['Best Drama Series','Best Comedy Series','Best Actor in a Television 
 abbreviations = {'television':'tv'}
 
 # Dictionary of keywords and what category they correspond to
-keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,'nominee':3,'nominated':3,'best speech':4,'best dress':5,'best look':5,'worst dress':6,'worst look':6}
+keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,'nominee':3,'nominated':3,"nomin":3, 'best speech':4,'best dress':5,'best look':5,'worst dress':6,'worst look':6}
 # keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,' introduc':2,'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
 # keywords_dict = {'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
 
@@ -57,6 +73,19 @@ class Award:
 		print('Presenter votes: {}'.format(self.voting_dict[2]))
 		# print('Nominee votes: {}'.format(self.voting_dict[3]))
 		print('Winner: {}\n'.format(self.winner))
+
+
+def keywordFilter(df, keywordList, excludeList = []):
+	df_useful = df.copy()
+	for keyword in keywordList:
+		df_useful = df_useful.loc[df_useful['text'].str.contains(keyword, case = False)]
+	# df_useful['text'] = [u.encode('ascii', 'ignore') for u in df_useful['text']]
+	for keyword in excludeList:
+		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if keyword in x else 1)
+		df_useful = df_useful.dropna()
+	df_helper = df_useful.groupby('text').count()
+	df_helper = df_helper.reset_index()
+	return df_helper
 
 
 # Initialize awards function that loops through the list of TV and Movie awards and creates Award objects with those names and adds it to Award_list 

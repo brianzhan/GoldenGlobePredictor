@@ -14,11 +14,11 @@ import numpy as np
 from nltk.corpus import stopwords
 
 stop = stopwords.words('english')
-pd.options.display.max_colwidth = 400
-# data = json.load(open('gg2018.json'))
-df = pd.DataFrame(columns = ['text', 'id_str'])
-df = pd.read_json('gg2018.json')
-df['text'] = [str(u) for u in df['text']]
+# pd.options.display.max_colwidth = 400
+# # data = json.load(open('gg2018.json'))
+# df = pd.DataFrame(columns = ['text', 'id_str'])
+# df = pd.read_json('gg2018.json')
+# df['text'] = [str(u) for u in df['text']]
 
 
 
@@ -69,23 +69,23 @@ class Award:
 		print('Award: {}'.format(self.name))
 		print('Presented By: {}'.format(self.presenter))
 		print('Nominees: {}'.format(', '.join(self.voting_dict[3])))
-		# print('Winner votes: {}'.format(self.voting_dict[1]))
+		print('Winner votes: {}'.format(self.voting_dict[1]))
 		print('Presenter votes: {}'.format(self.voting_dict[2]))
 		# print('Nominee votes: {}'.format(self.voting_dict[3]))
 		print('Winner: {}\n'.format(self.winner))
 
 
-def keywordFilter(df, keywordList, excludeList = []):
-	df_useful = df.copy()
-	for keyword in keywordList:
-		df_useful = df_useful.loc[df_useful['text'].str.contains(keyword, case = False)]
-	# df_useful['text'] = [u.encode('ascii', 'ignore') for u in df_useful['text']]
-	for keyword in excludeList:
-		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if keyword in x else 1)
-		df_useful = df_useful.dropna()
-	df_helper = df_useful.groupby('text').count()
-	df_helper = df_helper.reset_index()
-	return df_helper
+# def keywordFilter(df, keywordList, excludeList = []):
+# 	df_useful = df.copy()
+# 	for keyword in keywordList:
+# 		df_useful = df_useful.loc[df_useful['text'].str.contains(keyword, case = False)]
+# 	# df_useful['text'] = [u.encode('ascii', 'ignore') for u in df_useful['text']]
+# 	for keyword in excludeList:
+# 		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if keyword in x else 1)
+# 		df_useful = df_useful.dropna()
+# 	df_helper = df_useful.groupby('text').count()
+# 	df_helper = df_helper.reset_index()
+# 	return df_helper
 
 
 # Initialize awards function that loops through the list of TV and Movie awards and creates Award objects with those names and adds it to Award_list 
@@ -136,17 +136,18 @@ def analyze_tweets(filename):
 						Award_words.add(word.lower())
 				# Only execute if the tweet relates to an award
 				if(category > 3 or award_guess != None): # bonus (speech,dress,looking)
-					tweet = full_tweet
+					tweet_text = full_tweet
 					if(category > 0):
-						tweet = full_tweet.split(keyword)[0]
-					entity_list = find_named_entities(tweet, category)
+						tweet_text = full_tweet.split(keyword)[0]
+					entity_list = find_named_entities(tweet_text, category)
 					if(entity_list != []):
 						print('Tweet Category Guess: {}'.format(category))
 						print('Final Entity Guess: {}'.format(entity_list))
+						count = tweet['id_str']
 						if(award_guess == None and category > 3):
-							submit_vote_bonus_info(category,entity_list)
+							submit_vote_bonus_info(category,entity_list,count)
 						else:
-							submit_vote(category,award_guess,entity_list)
+							submit_vote(category,award_guess,entity_list,count)
 							print('Tweet Award Guess: {}'.format(award_guess.name))
 							
 						print('Tweet: {}'.format(full_tweet))
@@ -265,21 +266,21 @@ def find_named_entities(tweet, category):
 
 # If we found a potential winner, then add 1 to the awards winner dictionary with the person's name as the key
 # If that person's name is not in the dictionary yet then initialize it with a count of 1
-def submit_vote(category,award,entity_list):	
+def submit_vote(category,award,entity_list,count):	
 	for entity in entity_list:
 		if(entity in award.voting_dict[category]):
-			award.voting_dict[category][entity] += 1
+			award.voting_dict[category][entity] += count
 		else:
-			award.voting_dict[category][entity] = 1
+			award.voting_dict[category][entity] = count
 
 
 # For categories that do not relate to awards, submit votes to the bonus info dictionary
-def submit_vote_bonus_info(category,entity_list):
+def submit_vote_bonus_info(category,entity_list,count):
 	for entity in entity_list:
 		if(entity in Bonus_Info[category]):
-			Bonus_Info[category][entity] += 1
+			Bonus_Info[category][entity] += count
 		else:
-			Bonus_Info[category][entity] = 1
+			Bonus_Info[category][entity] = count
 
 # Takes in a voting dictionary and attempts to find repeat keys that are just slight variations and merges them
 # Sometimes people tweet in all lower case or all upper case, so if a key matches another one in an upper or lower case then add it its value to that one
@@ -334,7 +335,7 @@ def get_results():
 def main():
 	t0 = time.time()
 	init_awards()
-	analyze_tweets('gg2018.json')
+	analyze_tweets('simplified_data.json')
 	get_results()
 	t1 = time.time()
 	print("\nTotal Running Time: {}".format(t1-t0))

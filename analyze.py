@@ -38,7 +38,7 @@ tAwards = ['Best Drama Series','Best Comedy Series','Best Actor in a Television 
 abbreviations = {'television':'tv'}
 
 # Dictionary of keywords and what category they correspond to
-keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,'nominee':3,'nominated':3,"nomin":3, 'best speech':4,'best dress':5,'best look':5,'worst dress':6,'worst look':6}
+keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,'nominee':3,'nominated':3,'nomin':3, 'best speech':4,'best dress':5,'best look':5,'worst dress':6,'worst look':6}
 # keywords_dict = {' win':1,'congratulation':1,' present':2,' announc':2,' introduc':2,'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
 # keywords_dict = {'best speech':3,'best dress':4,'best look':4,'worst dress':5,'worst look':5}
 
@@ -113,7 +113,11 @@ def init_awards():
 		award.filtered_sentence = filtered_sentence
 	Award_words.add('golden')
 	Award_words.add('globe')
-
+	# all key words are added as stop words
+	for key,val in category_dict.items():
+		words = val.split(' ')
+		for word in words:
+			Award_words.add(word.lower())
 
 # Main function for analyzing the tweets
 # Opens json file with ~800,000 tweets and calls helper functions to filter results
@@ -127,17 +131,14 @@ def analyze_tweets(filename):
 			tweet_lowercase = full_tweet.lower()
 			keyword,category = find_tweet_category(tweet_lowercase)
 			# Only execute if the tweet relates to a category
-			if (category > 0):
+			if (category != None):
 				award_guess = None
-				if(category < 4): # winner presenter 		
+				if(category <= 3): # winner presenter 		
 					award_guess = find_tweet_award(tweet_lowercase)
-				else: # bonus
-					for word in category_dict[category].split(' '):
-						Award_words.add(word.lower())
-				# Only execute if the tweet relates to an award
-				if(category > 3 or award_guess != None): # bonus (speech,dress,looking)
+				# Only execute if the tweet relates to an award or its a category unrelated to an award
+				if(category > 3 or award_guess != None): # bonus (speech,dress,looking) or related to a award
 					tweet_text = full_tweet
-					if(category > 0):
+					if(category != 3):
 						tweet_text = full_tweet.split(keyword)[0]
 					entity_list = find_named_entities(tweet_text, category)
 					if(entity_list != []):
@@ -160,7 +161,7 @@ def find_tweet_category(tweet_lowercase):
 	for key,val in keywords_dict.items():
 		if(key in tweet_lowercase):
 			return key,val
-	return None,0
+	return None,None
 
 def find_tweet_award(tweet_lowercase):
 	# We made the assumption that each tweet references at most 1 award (could reference 0)

@@ -71,14 +71,15 @@ class Award:
 		print('Winner: {}\n'.format(self.winner))
 
 
-def keywordFilter(df, keywordList, selectionList ,excludeList = []):
+def keywordFilter(df, keywordList, selectionList=[] ,excludeList = []):
 	df_useful = df.copy()
 	for keyword in keywordList:
 		df_useful = df_useful.loc[df_useful['text'].str.contains(keyword, case = False)]
 	# df_useful['text'] = [u.encode('ascii', 'ignore') for u in df_useful['text']]
 
-	df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if (sum([word.lower() in x.lower() for word in selectionList])==0) else 1)
-	df_useful = df_useful.dropna()
+	if (len(selectionList) != 0):
+		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if (sum([word.lower() in x.lower() for word in selectionList])==0) else 1)
+		df_useful = df_useful.dropna()
 
 	for keyword in excludeList:
 		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if keyword.lower() in x.lower() else 1)
@@ -365,7 +366,7 @@ def findNominee():
 	for award in Award_list:
 		winner = award.winner
 		if(winner != ''):
-			tweetsList = keywordFilter(df,['win over', winner]).to_dict('records')
+			tweetsList = keywordFilter(df,[winner], ['win over']).to_dict('records')
 			award.voting_dict[3][winner] = 100
 			for tweet in tweetsList:
 				print ('tweets are ', tweet)

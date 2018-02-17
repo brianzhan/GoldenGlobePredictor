@@ -76,13 +76,17 @@ class Award:
 		print('Winner: {}\n'.format(self.winner))
 
 
-def keywordFilter(df, keywordList, excludeList = []):
+def keywordFilter(df, keywordList, selectionList ,excludeList = []):
 	df_useful = df.copy()
 	for keyword in keywordList:
 		df_useful = df_useful.loc[df_useful['text'].str.contains(keyword, case = False)]
 	# df_useful['text'] = [u.encode('ascii', 'ignore') for u in df_useful['text']]
+
+	df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if (sum([word.lower() in x.lower() for word in selectionList])==0) else 1)
+	df_useful = df_useful.dropna()
+
 	for keyword in excludeList:
-		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if keyword in x else 1)
+		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if keyword.lower() in x.lower() else 1)
 		df_useful = df_useful.dropna()
 	df_helper = df_useful.groupby('text').count()
 	df_helper = df_helper.reset_index()

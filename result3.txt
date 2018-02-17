@@ -1,0 +1,427 @@
+==============================================================
+Looking at  Best Motion Picture - Drama
+                                                                                                                                                  text  \
+0                                b'Check out the trailer for "Dunkirk," nominee for Best Motion Picture - Drama #GoldenGlobes https://t.co/1rNR4qQmku'   
+1  b'RT @lilsasquatch66: Golden Globes Nominees: \nBest Motion Picture - Drama \n\n- Call Me By Your Name\n- Dunkirk\n- Celestia Vega Gets Rough Firs'   
+
+   id_str  
+0       1  
+1       2  
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Motion Picture - Musical or Comedy
+                                                                                                                                text  \
+0  b'Check out the trailer for "Get Out," nominee for Best Motion Picture - Musical or Comedy #GoldenGlobes https://t.co/DS3PxofhA0'   
+
+   id_str  
+0       1  
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Director
+                                                                                                                                                  text  \
+0                                     b'"And here all the all male nominees"- Natalie Portman presenting the Best Director award at the #GoldenGlobes'   
+1                                                b'"And here all the male nominees" - Natalie Portman presenting Best Director. #GoldenGlobe #TIMESUP'   
+2                                             b'"And here are all the all-male nominees" Natalie Portman spitting FIRE while announcing best director'   
+3                                    b'"And here are the  all male  nominees." Natalie Portman presenting the #GoldenGlobes awards for best director.'   
+4                        b'"And here are the ALL MALE nominees." -Natalie Portman at the #GoldenGlobes presenting the Best Director Category. Yessss '   
+5                                 b'"And here are the all male nominees (for Best Director)." NATALIE DID THAT. #GoldenGlobes https://t.co/uGzkOFbUwU'   
+6                                              b'"And here are the all male nominees [for best director]." -- Natalie Portman https://t.co/TKSOKp0eja'   
+7                           b'"And here are the all male nominees" - Natalie Portman presenting the Best Director award .  DRAG THEM!!! #GoldenGlobes'   
+8                                b'"And here are the all male nominees" - Natalie Portman snaps while presenting Best Director - STRAIGHT AFTER OPRAH'   
+9                                     b'"And here are the all male nominees." -- Natalie Portman, presenting the Best Director Award at #GoldenGlobes'   
+10                                                                b'"And here are the all male nominees." ~Natalie Portman introducing best director.'   
+11                     b'"And here are the all-male nominees." - Natalie Portman re: Best Director #GoldenGlobes hahaha! Well done. But congrats GDT.'   
+12                               b'"And here are the all-male nominees." - Natalie Portman speaking truth on the Best Director category #goldenglobes'   
+13       b'"And here are the all-male nominees." Natalie Portman throwing shade at the Best Director category is my aesthetic for 2018. #GoldenGlobes'   
+14                                  b'"Best director: And here are all the male nominees - Natalie portman" solo por esto tiene que ganar lady bird!!'   
+15                                        b'"Here are the All-Male Nominees for Best Director" Where are Greta Gerwig &amp; Dee Rees, #GoldenGlobes ?'   
+16                                b'"Here are the all male nominees" - Natalie Portman announcing Best Director #GoldenGlobes https://t.co/lorSIeiH0I'   
+17              b'"Here are the all male nominees." - Natalie Portman introduces Best Director category at the #GoldenGlobes. https://t.co/8MUmqVdeSj'   
+18            b'"Natalie Portman Presents Best Director: Here Are the All-Male Nominees" by DANIEL VICTOR via NYT https://t.co/g8cKDREE24 #MoviesNews'   
+19                                                            b'"We\'re here to present Best Director"\n"And here are the all-male nominees"\nNATALIE'   
+20                                                   b'"here are all the male nominees" (best director) YES NATALIE PORTMAN U TELL \'EM #goldenglobes'   
+21                                                                  b'"these are the all male nominees" for best director NATALIE PORTMAN YOU GO GIRL'   
+22                                              b'#NataliePortman announcing Best Director Nominees at #GoldenGlobes "Here Are The All Male Nominees"'   
+23    b'#NataliePortman just threw some A-level shade at the #GoldenGlobes for the all-male cadre of nominees for Best Director. \n\nA-level, indeed.'   
+24                                          b'#NataliePortman just won the #TheGoldenGlobes - for best director : "here are the all male nominees..."'   
+25                                           b'#NataliePortman with that ZING!! &lt;3 as she presents for an all male group of Best Director nominees'   
+26                                          b"'And here are the all male nominees' --Natalie Portman presenting the best director award #GoldenGlobes"   
+27            b'*after oprahs inspiring speech about women* \n\nnatalie: now here are the all MALE nominees for best director https://t.co/7mxO3sJY6d'   
+28                                          b'*barring Ava, Sophia, and Kathryn as nominees only. No female has even won the Globe for best director.'   
+29              b'....and the five MALE nominees for best director. Thank you for that incredible reminder Natalie #TIMESUP #goldenglobes @TIMESUPNOW'   
+..                                                                                                                                                 ...   
+327  b'Retweeted Ava DuVernay (@ava):\n\nLast time I was at the Golden Globes, it was as a Best Director nominee for SELMA... https://t.co/2Z5YPvmhu1'   
+328                   b'Ron Howard and Natalie Portman announcing Best Director Nominees.\n\nNatalie Portman: And here are the all-male nominees...\n'   
+329                                           b'Ron Howard: Here are the nominees for Best Director!\nNatalie Portman: MALE directors \n#goldenglobes'   
+330      b'Seen the movie its good. If I had to switch one of the best director nominees with Greta I guess it would be Spielberg. But thats a reach.'   
+331                                            b'Shade  Here are the all male nominees. - Natalie Portman introducing the best director #GoldenGlobes'   
+332                                                            b'Shout out to Natalie Portman for that excellent all MALE nominees for best director.'   
+333         b"Shoutout to Patty Jenkins and Greta Gerwig who should've been included amongst the Best Director nominees #GoldenGlobes #WhyWeWearBlack"   
+334                                     b'Sling that Zinger Natalie Portman!\nGolden Globe award for Best Director: Here are the, all male, nominees.'   
+335                                     b'So here are all male nominees - Natalie Portman presenting the best director award  https://t.co/CJJ7JRZcdQ'   
+336                                  b'The absolute shade #NataliePortman threw about the all male nominees for Best Director https://t.co/MHZ7FAJcT4'   
+337                                                                                  b'The all-male Best Director nominees look bummed. #GoldenGlobes'   
+338                                      b'WATCH: Natalie Portman calls out lack of female nominees in best director category https://t.co/A08glwPIgS'   
+339                        b"Wait.... there weren't any female nominees for best director?  Natalie Portman with that slay after oprah's let it rain!"   
+340                                      b'We need more women Best Director Nominees. TimesUp! - @BarbraStreisand #TIMESUP #goldenglobes@goldenglobes'   
+341                        b'Were here to announce the Golden Globe for best Director.\n\nAnd here are the all-male nominees. https://t.co/Az8PaSmmau'   
+342                       b'When Natalie Portman introduces the category for Best Director: the ALL MALE nominees #shade #truthtalk #goldenglobes2018'   
+343                             b'When Natalie Portman said And now the ALL MALE nominees for best director #GoldenGlobes2018 https://t.co/WwdUQlmCNu'   
+344                                   b'When Natalie Portman throws shade at the HFPAs all-male nominees for best director... https://t.co/berMTBLKB4'   
+345                                                           b'YES NATALIE PORTMAN Now the ALL MALE nominees for best director... YES BITCH GET THEM'   
+346                                                                     b'Yes #NataliePortman all MALE nominees for best director #truth #GoldenGlobe'   
+347                                          b'Yo Natalie Portman is a QUEEN introducing the all male nominees for Best Director at the @goldenglobes'   
+348   b'You go, #NataliePortman... "And here are the &lt;ALL MALE&gt; nominees"\n(For best director)\n\n@goldenglobes #GoldenGlobes2018 #GoldenGlobes'   
+349                           b'Zoweeee!!! #NataliePortman pointed introduction of the all male nominees for best director @goldenglobes was awesome!'   
+350                           b'and here are the ALL MALE nominees\n Natalie Portman SPILLING THE TEA while presenting Best Director\n\n#GoldenGlobes'   
+351                                                           b'and here are the, all male, best director nominees YES NATALIE ROAST THIS DAMN SYSTEM'   
+352                    b"enjoy  #Natalie_Portman calls out the Globes' 'all-male' best director nominees from the stage https://t.co/8QyNo0CjnK great"   
+353                                  b"natalie portman calls out the globes' 'all-male' best director nominees from the stage https://t.co/kBxS6dVNfe"   
+354                             b'ok so i watched like a few minutes of the golden globes AND THE ROAST TO THE NOMINEES OF BEST DIRECTOR OMGJSJFJSKDK'   
+355              b'wow natalie portman presentando best director dijo: "and here are all the MALE nominees" she really did THAT, what a feminist icon'   
+356                                       b'yas natalie portman for shading the best director category for having no female nominees... #goldenglobes'   
+
+     id_str  
+0         1  
+1         1  
+2         1  
+3         1  
+4         1  
+5         1  
+6         1  
+7         1  
+8         1  
+9         1  
+10        1  
+11        1  
+12        1  
+13        1  
+14        1  
+15        1  
+16        1  
+17        1  
+18        1  
+19        1  
+20        1  
+21        1  
+22        1  
+23        1  
+24        1  
+25        1  
+26        1  
+27        1  
+28        1  
+29        1  
+..      ...  
+327       1  
+328       1  
+329       1  
+330       1  
+331       1  
+332       1  
+333       1  
+334       1  
+335       1  
+336       1  
+337       1  
+338       1  
+339       1  
+340       1  
+341       1  
+342       1  
+343       1  
+344       1  
+345       1  
+346       1  
+347       1  
+348       1  
+349       1  
+350       1  
+351       1  
+352       1  
+353       1  
+354       1  
+355       1  
+356       1  
+
+[357 rows x 2 columns]
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Actor - Motion Picture Drama
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Actor - Motion Picture Musical or Comedy
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Actress - Motion Picture Drama
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Actress - Motion Picture Musical or Comedy
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Supporting Actor - Motion Picture
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Supporting Actress - Motion Picture
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Screenplay
+                                                                                                                                             text  \
+0              b'Did You Know? #AaronSorkin is the only #GoldenGlobes nominee for Best Screenplay - Motion Picture this year who has won before.'   
+1                             b'Did you know that literally last year, the #GoldenGlobes best screenplay category had exclusively male nominees?'   
+2   b'RT @CaitlinMcWriter: Dear #GoldenGlobes: When announcing the Best Screenplay nominees, how about saying the names of the writers out loud.'   
+3  b"RT @CriticsChoice: Congratulations to Critics' Choice nominee Martin McDonagh for his Golden Globes win for Best Screenplay - Motion Pictur"   
+
+   id_str  
+0       1  
+1       1  
+2       1  
+3       5  
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Original Score
+                                                                                                                                     text  \
+0                   b'Best Original Score nominees: 5 musical geniuses\nBest Original Song nominees: 5 turds in a bucket \n#GoldenGlobes'   
+1           b"I'd have voted for Carter Burwell, but as nominee lists go the Golden Globes nailed it for Best Original Score. Nailed it."   
+2  b"if blade runner 2049 had been nominated for 'best original score' hans zimmer would've been a double nominee tonight, what a legend"   
+
+   id_str  
+0       1  
+1       1  
+2       1  
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Original Song
+                                                                                                                                                 text  \
+0                           b'#KellyClarkson and @KeithUrban announce/sing the nominees for Best Original Song, Motion Picture at the @GoldenGlobes.'   
+1                               b'Best Original Score nominees: 5 musical geniuses\nBest Original Song nominees: 5 turds in a bucket \n#GoldenGlobes'   
+2            b"No please don't play anything substantial from the Best Original song nominees, we'll just wonder what they sound like. #GoldenGlobes"   
+3   b"RT @CriticsChoice: Congratulations to Critics' Choice nominees Benj Pasek &amp; Justin Paul for their Golden Globes win for Best Original Song"   
+4                                      b'RT @JaimeLynQuinn: Me waiting for the list of Nominees for Best Original Song like: https://t.co/A37UraUQUZ'   
+5  b'RT @MariahArgentina: Good luck tonight @MariahCarey &amp; @marcshaiman for the #goldenglobes nominee: best original song "The Star" https://t.c'   
+6      b'RT @playbill: so four of the five nominees for Best Original Song were actually written by musical theatre folks #GoldenGlobes https://t.co'   
+7      b"RT @tvinsider: No please don't play anything substantial from the Best Original song nominees, we'll just wonder what they sound like. #Gol"   
+8                     b"THEY WERE SHOWING THE MOTION PICTURE BEST ORIGINAL SONG NOMINEES AND THEY SHOWED NICK'S MUSIC VIDEO FOR HOME!! #GoldenGlobes"   
+
+   id_str  
+0       1  
+1       1  
+2       1  
+3       2  
+4       1  
+5       3  
+6       7  
+7       1  
+8       1  
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Foreign Language Film
+                                                                                                                                      text  \
+0  b'Best Foreign Language Film nominees: A Fantastic Woman, First They Killed My Father, The Square, In The Fade, Loveless #GoldenGlobes'   
+1                                     b"i'm always feel so proud for every nominee of best foreign language film category, bless them all"   
+
+   id_str  
+0       1  
+1       1  
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Animated Feature Film
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Cecil B. DeMille Award
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Drama Series
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Comedy Series
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Actor in a Television Drama Series
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Actor in a Television Comedy Series
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Actress in a Television Drama Series
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Actress in a Television Comedy Series
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Limited Series or Motion Picture made for Television
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Actor in a Limited Series or Motion Picture made for Television
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Actress in a Limited Series or Motion Picture made for Television
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Supporting Actor in a Series, Limited Series or Motion Picture made for Television
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+==============================================================
+Looking at  Best Supporting Actress in a Series, Limited Series or Motion Picture made for Television
+Empty DataFrame
+Columns: [text, id_str]
+Index: []
+==============================================================
+
+
+
+
+Brians-MBP:GGProject brianzhan$ 

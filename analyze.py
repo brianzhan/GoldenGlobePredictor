@@ -14,11 +14,11 @@ import numpy as np
 from nltk.corpus import stopwords
 
 stop = stopwords.words('english')
-# pd.options.display.max_colwidth = 400
-# # data = json.load(open('gg2018.json'))
-# df = pd.DataFrame(columns = ['text', 'id_str'])
-# df = pd.read_json('gg2018.json')
-# df['text'] = [str(u) for u in df['text']]
+pd.options.display.max_colwidth = 400
+# data = json.load(open('gg2018.json'))
+df = pd.DataFrame(columns = ['text', 'id_str'])
+df = pd.read_json('gg2018.json')
+
 
 
 
@@ -75,17 +75,17 @@ class Award:
 		print('Winner: {}\n'.format(self.winner))
 
 
-# def keywordFilter(df, keywordList, excludeList = []):
-# 	df_useful = df.copy()
-# 	for keyword in keywordList:
-# 		df_useful = df_useful.loc[df_useful['text'].str.contains(keyword, case = False)]
-# 	# df_useful['text'] = [u.encode('ascii', 'ignore') for u in df_useful['text']]
-# 	for keyword in excludeList:
-# 		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if keyword in x else 1)
-# 		df_useful = df_useful.dropna()
-# 	df_helper = df_useful.groupby('text').count()
-# 	df_helper = df_helper.reset_index()
-# 	return df_helper
+def keywordFilter(df, keywordList, excludeList = []):
+	df_useful = df.copy()
+	for keyword in keywordList:
+		df_useful = df_useful.loc[df_useful['text'].str.contains(keyword, case = False)]
+	# df_useful['text'] = [u.encode('ascii', 'ignore') for u in df_useful['text']]
+	for keyword in excludeList:
+		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if keyword in x else 1)
+		df_useful = df_useful.dropna()
+	df_helper = df_useful.groupby('text').count()
+	df_helper = df_helper.reset_index()
+	return df_helper
 
 
 # Initialize awards function that loops through the list of TV and Movie awards and creates Award objects with those names and adds it to Award_list 
@@ -131,15 +131,14 @@ def analyze_tweets(filename):
 			tweet_lowercase = full_tweet.lower()
 			keyword,category = find_tweet_category(tweet_lowercase)
 			# Only execute if the tweet relates to a category
-			if (category != None):
+			if (category != None and category != 3): # nominee category is determined at teh end 
 				award_guess = None
-				if(category <= 3): # winner presenter 		
+				if(category <= 2): # winner presenter 		
 					award_guess = find_tweet_award(tweet_lowercase)
 				# Only execute if the tweet relates to an award or its a category unrelated to an award
 				if(category > 3 or award_guess != None): # bonus (speech,dress,looking) or related to a award
 					tweet_text = full_tweet
-					if(category != 3):
-						tweet_text = full_tweet.split(keyword)[0]
+					tweet_text = full_tweet.split(keyword)[0]
 					entity_list = find_named_entities(tweet_text, category)
 					if(entity_list != []):
 						print('Tweet Category Guess: {}'.format(category))
@@ -223,7 +222,7 @@ def find_named_entities(tweet, category):
 	# If the Named Entity Recognition from NLTK doesn't work then find next best possible name
 	# Assuming an award is given 'to' someone, then concatenate all captialized words after 'to' if in the tweet
 	# If not, then move on to another tweet and ignore this one
-	if((category == 1 or category == 3) and entity_list == []):
+	if(category==1 and entity_list == []):
 		entity = ''
 		i = None
 		for index,word in enumerate(filtered_sentence):
@@ -261,6 +260,25 @@ def find_named_entities(tweet, category):
 			if entity != '':
 				entity_list.append(entity)
 
+	if(category == 3 and entity_list == []):
+		entity = ''
+		i = None
+		for index,word in enumerate(filtered_sentence):
+			if(word == 'win over'):
+				i = index + 1
+				break
+		if(i != None):
+			check = True
+			while(i<len(filtered_sentence) and (filtered_sentence[i][0].isupper() or filtered_sentence[i][0] == "'")):
+				# If the algorithm is confused and things the award is a persons name then forget it
+				if(filtered_sentence[i].lower() in Award_words):
+					check = False
+					break
+				entity += filtered_sentence[i] + ' '
+				i += 1
+			entity = entity.strip()
+			if(check == True and entity != ''):
+				entity_list.append(entity)
 	return entity_list
 
 	
@@ -310,11 +328,11 @@ def get_results():
 	# Finds the person who got the most votes in the winner votes dictionary and sets the award winner to be that person
 	for award in Award_list:
 		if(award.voting_dict[1]!= {}):
-			possibleNominee = []
+			# possibleNominee = []
 			[(award.winner,max_votes)] = dict(Counter(award.voting_dict[1]).most_common(1)).items()
-			for n,v in dict(Counter(award.voting_dict[3]).most_common(5)).items():
-				possibleNominee.append(n)
-			award.voting_dict[3] = possibleNominee
+			# for n,v in dict(Counter(award.voting_dict[3]).most_common(5)).items():
+			# 	possibleNominee.append(n)
+			# award.voting_dict[3] = possibleNominee
 			# print("possible nominee is", possibleNominee)
 		award.print_award()
 
@@ -332,12 +350,27 @@ def get_results():
 
 		print('{}: {}'.format(category_dict[category],entity))
 
+def findNominee():
+	for award in Award_list:
+		winner = award.winner
+		tweetsList = keywordFilter(df,['win over', winner]).to_dict('records')
+		votesList = {}
+		for tweet in tweetsList:
+			print ('tweets are ', tweet)
+			for entity in find_named_entities(tweet['text'], 3):
+				if entity in votesList:
+					votesList[entity] += tweet['id_str']
+				else:
+					votesList[entity] = tweet['id_str']
+				print('votes for ', entity, ' are ', votesList[entity])
+
 
 def main():
 	t0 = time.time()
 	init_awards()
 	analyze_tweets('simplified_data.json')
 	get_results()
+	findNominee()
 	t1 = time.time()
 	print("\nTotal Running Time: {}".format(t1-t0))
 

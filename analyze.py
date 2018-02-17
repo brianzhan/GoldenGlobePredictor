@@ -6,6 +6,7 @@ from nltk.tag import pos_tag
 import time
 from difflib import SequenceMatcher
 from collections import Counter
+import os.path
 
 import json
 import pandas as pd
@@ -365,8 +366,21 @@ def findNominee():
 				print('votes for ', entity, ' are ', votesList[entity])
 
 
+
+def initializeJSONfile():
+	if not os.path.exists('simplified_data.json'):
+		df = pd.DataFrame(columns = ['text', 'id_str'])
+		df = pd.read_json('gg2018.json')
+		df = df.groupby('text').count()
+		df = df.reset_index()
+		data = df.to_dict('records')
+		with open('simplified_data.json', 'w') as outfile:  
+			json.dump(data, outfile)	
+
+
 def main():
 	t0 = time.time()
+	initializeJSONfile()
 	init_awards()
 	analyze_tweets('simplified_data.json')
 	get_results()

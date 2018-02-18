@@ -7,18 +7,14 @@ import time
 from difflib import SequenceMatcher
 from collections import Counter
 import os.path
-
-import json
 import pandas as pd
-import nltk
 import numpy as np
-from nltk.corpus import stopwords
+
 
 stop = stopwords.words('english')
 pd.options.display.max_colwidth = 400
-# data = json.load(open('gg2018.json'))
-df = pd.DataFrame(columns = ['text', 'id_str'])
-df = pd.read_json('gg2018.json')
+
+
 
 
 # Motion Picture Awards
@@ -71,22 +67,7 @@ class Award:
 		print('Winner: {}\n'.format(self.winner))
 
 
-def keywordFilter(df, keywordList, selectionList=[] ,excludeList = []):
-	df_useful = df.copy()
-	for keyword in keywordList:
-		df_useful = df_useful.loc[df_useful['text'].str.contains(keyword, case = False)]
-	# df_useful['text'] = [u.encode('ascii', 'ignore') for u in df_useful['text']]
 
-	if (len(selectionList) != 0):
-		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if (sum([word.lower() in x.lower() for word in selectionList])==0) else 1)
-		df_useful = df_useful.dropna()
-
-	for keyword in excludeList:
-		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if keyword.lower() in x.lower() else 1)
-		df_useful = df_useful.dropna()
-	df_helper = df_useful.groupby('text').count()
-	df_helper = df_helper.reset_index()
-	return df_helper
 
 
 # Initialize awards function that loops through the list of TV and Movie awards and creates Award objects with those names and adds it to Award_list 
@@ -362,7 +343,30 @@ def get_results():
 	# 		[(entity,max_votes)] = dict(Counter(bonus_dict).most_common(1)).items()
 	# 		print('{}: {}'.format(category_dict[category],entity))
 
+def keywordFilter(df, keywordList, selectionList=[] ,excludeList = []):
+	# KeywordFilter takes in keywordList that the tweet mush have all of them,
+	# selectionList that the tweet mush have one of them,
+	# and excludeList that the tweer can't have any of them
+
+	df_useful = df.copy()
+	for keyword in keywordList:
+		df_useful = df_useful.loc[df_useful['text'].str.contains(keyword, case = False)]
+
+	if (len(selectionList) != 0):
+		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if (sum([word.lower() in x.lower() for word in selectionList])==0) else 1)
+		df_useful = df_useful.dropna()
+
+	for keyword in excludeList:
+		df_useful['helper'] = df_useful['text'].apply(lambda x: np.NaN if keyword.lower() in x.lower() else 1)
+		df_useful = df_useful.dropna()
+
+	return df_useful
+
 def findNominee():
+
+	df = pd.DataFrame(columns = ['text', 'id_str'])
+	df = pd.read_json('simplified_data.json')
+
 	for award in Award_list:
 		winner = award.winner
 		if(winner != ''):
@@ -393,10 +397,11 @@ def print_results():
 
 
 
-def initializeJSONfile():
+def initializeJSONfile(path):
+	# Check whether the simplified JSON files exist, if not, generate it
 	if not os.path.exists('simplified_data.json'):
 		df = pd.DataFrame(columns = ['text', 'id_str'])
-		df = pd.read_json('gg2018.json')
+		df = pd.read_json(path)
 		df = df.groupby('text').count()
 		df = df.reset_index()
 		data = df.to_dict('records')
@@ -406,7 +411,7 @@ def initializeJSONfile():
 
 def main():
 	t0 = time.time()
-	initializeJSONfile()
+	initializeJSONfile('gg2018.json')
 	init_awards()
 	analyze_tweets('simplified_data.json')
 	get_results()

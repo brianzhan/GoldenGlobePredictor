@@ -103,41 +103,38 @@ def init_awards():
 
 # Main function for analyzing the tweets
 # Opens json file with ~800,000 tweets and calls helper functions to filter results
-def analyze_tweets(filename):
+def analyze_tweets(tweets):
 
-	with open(filename) as data_file:
-		tweets = json.load(data_file)
-
-		for tweet in tweets:
-			full_tweet = tweet['text']
-			tweet_lowercase = full_tweet.lower()
-			keyword,category = find_tweet_category(tweet_lowercase)
-			# Only execute if the tweet relates to a category
-			if (category != None): # nominee category is determined at the end 
-				award_guess = None
-				if(category <= 3): # winner presenter 		
-					award_guess = find_tweet_award(tweet_lowercase)
-				# Only execute if the tweet relates to an award or its a category unrelated to an award
-				if(category > 3 or award_guess != None): # bonus (speech,dress,looking) or related to a award
-					tweet_text = full_tweet
-					if(category == 2 or category > 3):
-						tweet_text = full_tweet.split(keyword)[0]
-					skip_nltk = False
-					if(category == 3):
-						skip_nltk = True
-					entity_list = find_named_entities(tweet_text, category, skip_nltk)
-					if(entity_list != []):
-						print('Tweet Category Guess: {}'.format(category))
-						print('Final Entity Guess: {}'.format(entity_list))
-						count = tweet['id_str']
-						if(category > 3):
-							submit_vote_bonus_info(category,entity_list,count)
-						else:
-							submit_vote(category,award_guess,entity_list,count)
-							print('Tweet Award Guess: {}'.format(award_guess.name))
-							
-						print('Tweet: {}'.format(full_tweet))
-						print('\n')
+	for tweet in tweets:
+		full_tweet = tweet['text']
+		tweet_lowercase = full_tweet.lower()
+		keyword,category = find_tweet_category(tweet_lowercase)
+		# Only execute if the tweet relates to a category
+		if (category != None): # nominee category is determined at the end 
+			award_guess = None
+			if(category <= 3): # winner presenter 		
+				award_guess = find_tweet_award(tweet_lowercase)
+			# Only execute if the tweet relates to an award or its a category unrelated to an award
+			if(category > 3 or award_guess != None): # bonus (speech,dress,looking) or related to a award
+				tweet_text = full_tweet
+				if(category == 2 or category > 3):
+					tweet_text = full_tweet.split(keyword)[0]
+				skip_nltk = False
+				if(category == 3):
+					skip_nltk = True
+				entity_list = find_named_entities(tweet_text, category, skip_nltk)
+				if(entity_list != []):
+					print('Tweet Category Guess: {}'.format(category))
+					print('Final Entity Guess: {}'.format(entity_list))
+					count = tweet['id_str']
+					if(category > 3):
+						submit_vote_bonus_info(category,entity_list,count)
+					else:
+						submit_vote(category,award_guess,entity_list,count)
+						print('Tweet Award Guess: {}'.format(award_guess.name))
+						
+					print('Tweet: {}'.format(full_tweet))
+					print('\n')
 						
 
 
@@ -362,15 +359,14 @@ def keywordFilter(df, keywordList, selectionList=[] ,excludeList = []):
 
 	return df_useful
 
-def findNominee():
+def findNominee(dataframe):
 
-	df = pd.DataFrame(columns = ['text', 'id_str'])
-	df = pd.read_json('simplified_data.json')
+	df = keywordFilter(dataframe, [], ['win over', 'wins over', 'won over', 'did not win', "didn't win"])
 
 	for award in Award_list:
 		winner = award.winner
 		if(winner != ''):
-			tweetsList = keywordFilter(df,[winner], ['win over']).to_dict('records')
+			tweetsList = keywordFilter(df,[winner]).to_dict('records')
 			award.voting_dict[3][winner] = 100
 			for tweet in tweetsList:
 				print ('tweets are ', tweet)
@@ -389,10 +385,9 @@ def findNominee():
 	# 		possibleNominee.append(n)
 	# 	award.voting_dict[3] = possibleNominee
 
-def findHost():
-	df = pd.DataFrame(columns = ['text', 'id_str'])
-	df = pd.read_json('simplified_data.json')
-	tweetsList = keywordFilter(df,['host', 'golden', 'globe']).to_dict('records')
+def findHost(dataframe):
+
+	tweetsList = keywordFilter(dataframe,['host', 'golden', 'globe']).to_dict('records')
 	voting_dict = {}
 	for tweet in tweetsList:
 		for entity in find_named_entities(tweet['text'], 6, False):
@@ -419,17 +414,23 @@ def initializeJSONfile(path):
 		df = df.reset_index()
 		data = df.to_dict('records')
 		with open('simplified_data.json', 'w') as outfile:  
-			json.dump(data, outfile)	
+			json.dump(data, outfile)
+		return df,data	
+	else:
+		df = pd.DataFrame(columns = ['text', 'id_str'])
+		df = pd.read_json('simplified_data.json')
+		data = df.to_dict('records')
+		return df, data
 
 
 def main():
 	t0 = time.time()
-	initializeJSONfile('gg2018.json')
+	dataframe, data = initializeJSONfile('gg2018.json')
 	init_awards()
-	analyze_tweets('simplified_data.json')
+	analyze_tweets(data)
 	get_results()
-	findNominee()
-	findHost()
+	findNominee(dataframe)
+	findHost(dataframe)
 	print_results()
 	t1 = time.time()
 	print("\nTotal Running Time: {}".format(t1-t0))

@@ -389,13 +389,26 @@ def findNominee():
 	# 		possibleNominee.append(n)
 	# 	award.voting_dict[3] = possibleNominee
 
+def findHost():
+	df = pd.DataFrame(columns = ['text', 'id_str'])
+	df = pd.read_json('simplified_data.json')
+	tweetsList = keywordFilter(df,['host', 'golden', 'globe']).to_dict('records')
+	voting_dict = {}
+	for tweet in tweetsList:
+		for entity in find_named_entities(tweet['text'], 6, False):
+			entity = entity.split('/')[0]
+			if entity in voting_dict:
+				voting_dict[entity] += tweet['id_str']
+			else:
+				voting_dict[entity] = tweet['id_str']
+	voting_dict = resolve_voting_dict(voting_dict)
+	host_name = max(voting_dict, key=lambda key: voting_dict[key])
+	print("\nThe host of Golden Globe is: {}".format(host_name))
 
 def print_results():
 	print("\n Printing Final Results \n")
 	for award in Award_list:
 		award.print_award()
-
-
 
 def initializeJSONfile(path):
 	# Check whether the simplified JSON files exist, if not, generate it
@@ -416,6 +429,7 @@ def main():
 	analyze_tweets('simplified_data.json')
 	get_results()
 	findNominee()
+	findHost()
 	print_results()
 	t1 = time.time()
 	print("\nTotal Running Time: {}".format(t1-t0))

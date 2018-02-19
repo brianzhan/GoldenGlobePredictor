@@ -1,0 +1,194 @@
+Last login: Sun Feb 18 19:38:15 on ttys000
+Brians-MBP:GGProject brianzhan$ python3 golden_globe.py 
+                                                                                                                                              text  \
+0                                                                                b'1st great gif of the night goes to William Dafoe #GoldenGlobes'   
+1        b'Love that Sam Rockwell won! He was PHENOMENAL in Three Billboards. But I also did love William Dafoe in Florida Project. #goldenglobes'   
+2     b'RT @AustinLatest: I wanted William Dafoe to win for The Florida Project so badly but Sam Rockwell was SO GOOD in Three Billboards. #Golde'   
+3                                  b'RT @AustinLatest: William Dafoe is all of us watching the #GoldenGlobes right now... https://t.co/xOHy8zAgVk'   
+4                                                                     b'RT @daltonvalette: William Dafoes face alone just made the #GoldenGlobes.'   
+5   b'Sam Rockwell grabs best supporting actor #ThreeBillboards at +275 beating out William Dafoe -150!!! #GoldenGlobes Underdogs already cashing'   
+6                                  b'WILLIAM DAFOE DESERVED THE AWARD. The Florida Project deserves better! #GoldenGlobes https://t.co/tVk3P9Unfj'   
+7                                                                                b'WTF William Dafoe!  Get a tie you BUM. https://t.co/ioQWKdBMIu'   
+8                           b'Why does William Dafoe look like The Joker in this picture? #GoldenGlobes2018 #GoldenGlobes https://t.co/G8kddWELHm'   
+9                                        b'William Dafoe shouldve snagged that one up, IMO. He was fantastic in The Florida Project #GoldenGlobes'   
+10                                                                                                      b"William Dafoe's face lol. #GoldenGlobes"   
+11                                                                                       b'William Dafoes face alone just made the #GoldenGlobes.'   
+
+    id_str  
+0        1  
+1        1  
+2        5  
+3        2  
+4        1  
+5        1  
+6        1  
+7        1  
+8        1  
+9        1  
+10       1  
+11       1  
+
+
+
+ Nominee Seperator 
+
+
+
+                                                                                                                                                text  \
+0                  b' tchalametdaily: Timothe Chalamet &amp; Armie Hammer 75th Annual Golden Globe Awards, Los Angeles |... https://t.co/Jxia4SUgmf'   
+1                                                   b'"Do I pinch myself? No, because if I wake up I\'ll be pissed." -- Armie Hammer\n#GoldenGlobes'   
+2                          b'#CMBYN Armie Hammer with wife Elizabeth Chambers on the #GoldenGlobe Red Carpet! \n\n#Globes75 https://t.co/joG8hYNEZP'   
+3                                   b'#GoldenGlobes\nArmie Hammer devia ter ganhado como melhor ator coadjuvante. Chateado.\n\nCall me by your name'   
+4                 b'#GoldenGlobes Prediction for Best Supporting Actor\n\nWill win: Willem Dafoe\nCould win: Armie Hammer\nShould win: Sam Rockwell'   
+5                                                               b'#GoldenGlobes Thank you armie hammer for making me happy! https://t.co/Ez6m4NtUL9'   
+6                                                                         b'#GoldenGlobes Timothee Chamelet y Armie Hammer. https://t.co/C4S6f0Tjgo'   
+7                                                               b'#GoldenGlobes WHERE THE FUCK ARE TIMOTHE CHALAMET AND ARMIE HAMMER I NEED ANSWERS'   
+8                                   b"#goldenglobes I'm sad Hugh Jackman or Armie Hammer didn't win but I'm happy for the winners especially Oprah."   
+9        b"(Delaware Online) #Armie Hammer Gushes About James Franco's #Golden Globe Nominees Dinner : Armie Hammer spent.. https://t.co/GtFc9E7wI2"   
+10                                                                               b"*waits for @auhme82's take on Armie Hammer's #GoldenGlobes look*"   
+11                                                   b"@Into @RealChalamet I am very happy and sad that Armie Hammer didn't get the Golden Globe ,,"   
+12                                                                             b'@TIMESUPNOW ARMIE HAMMER SHOULD BE SEDUCING EVERYONE #GoldenGlobes'   
+13                                     b'@bwestcineaste @FilmMomatic But come on, he is still Armie Hammer and out-attractiving his fellow nominees'   
+14                              b'@goldenglobes @3Billboards Very Sad to see Armie Hammer lose, but happy for Sam who has definitely paid his dues!'   
+15                                                                                            b'@goldenglobes @3Billboards armie hammer deserved it'   
+16                                                                  b'@goldenglobes @RealHughJackman @chrishemsworth This year goes to Armie Hammer'   
+17                    b'@goldenglobes HOW???!!! @CMBYNFilm @RealChalamet and Armie Hammer deserve better. Is this how you treat a true masterpiece?'   
+18                                                          b'@goldenglobes hi, i just want to talk about armie hammer not getting his golden globe'   
+19             b'AL ROKER: "All of this success, do you pinch yourself?"\nARMIE HAMMER: "No! If I wake up I\'ll be pissed!"\n#notwoke #GoldenGlobes'   
+20                                                                                          b'APOLOGIZE TO MR. ARMIE HAMMER RIGHT NOW #GoldenGlobes'   
+21                                                                                 b'ARMIE HAMMER I C U HONEY #GoldenGlobes https://t.co/1r0yrRKdo3'   
+22                                                                                                  b'ARMIE HAMMER I FUCKING LOVE YOU #GoldenGlobes'   
+23                                                                                                             b'ARMIE HAMMER IS HERE #GoldenGlobes'   
+24                                                                 b'ARMIE HAMMER IS HERE LAID EAZE AND GINTS #goldenglobes https://t.co/eCipyVjZMZ'   
+25                                                                                                              b'ARMIE HAMMER PLEASE #GoldenGlobes'   
+26                                                                                  b'ARMIE HAMMER TALKING ABOUT @CMBYNFilm  #GoldenGlobes #TimesUp'   
+27   b'ARMIE HAMMER TALKING ABOUT THE PEACH SCENE THE FIRST CHANCE HE GETS ON THE GOLDEN GLOBES RED CARPET IS MY FULL AESTHETIC LMAOOOOOOOOOOOOOOOO'   
+28                                                                                          b'ARMIE HAMMER THANK YOU FOR EXISTING BYE #GoldenGlobes'   
+29                                                                                                    b'ARMIE HAMMER YES  #GoldenGlobes #ERedCarpet'   
+..                                                                                                                                               ...   
+274                                                                                                            b'armie hammer is here #GoldenGlobes'   
+275                                   b'armie hammer is such a dreamboat. an old school word to describe someone old school handsome. #GoldenGlobes'   
+276                                                                                                       b'armie hammer look so GOOD #goldenglobes'   
+277                                                                    b'armie hammer may not have won the golden globe but https://t.co/hO1e5X6D0h'   
+278                                              b'armie hammer rankings\nacting: good\nface: good\nopinions: bad. very bad. shut up\n#GoldenGlobes'   
+279                                                                                 b'armie hammer should have won  #CallMeByYourName #GoldenGlobes'   
+280                                     b'armie hammer should make like jay-z bc i think he needs to brush some dirt off his shoulder #GoldenGlobes'   
+281                                                                                      b'armie hammer was robbed fight me https://t.co/YU7gGguyLu'   
+282                                                                                                          b'come on Armie Hammer!! #GoldenGlobes'   
+283                                                                                                               b'fuck armie hammer #GoldenGlobes'   
+284                                                                                                b"glad armie hammer didn't win tbh #goldenglobes"   
+285   b"i won't be able to follow the #GoldenGlobes but i trust them to rightfully award my deserving men Jude Law, Armie Hammer and Timothe thanks"   
+286                                                         b"if my boy armie hammer doesn't win a golden globe for his shorts in cmbyn, i will sue"   
+287          b'im so ready for call me by your name, timothe chalamet, and armie hammer to snatch the golden globes tonight https://t.co/fpf1maOaST'   
+288                                                                               b'is the armie hammer portion of the evening over?  #GoldenGlobes'   
+289                                                                                     b'its okay, armie hammer. you won in my heart #GoldenGlobes'   
+290                                                                               b"let's give it up for Armie Hammer #sanantonio boy #goldenglobes"   
+291                                                                              b'me during this whole thing: just show armie hammer #GoldenGlobes'   
+292                                                                       b'not to be shady or anything but ARMIE HAMMER DESERVED THAT GOLDEN GLOBE'   
+293                                                                                                       b'omg armie hammer deserved #goldenglobes'   
+294                                                b"omg mariah's sitting close to armie hammer @ the golden globes tonight https://t.co/k85hPYVYqe"   
+295                                                                                                               b'phew armie hammer #GoldenGlobes'   
+296                         b'so bummed for Armie Hammer, but Sam Rockwell was GREAT in Three Billboards Outside Ebbing, Missouri !!  #GoldenGlobes'   
+297                                                                 b'tell me why armie hammer didnt win best supporting actor at the #goldenglobes'   
+298                                                                         b'the disrespect honestly Armie Hammer deserved that golden globe I s2g'   
+299                                           b'the golden globes silence on the fact that armie hammers actual name is ARM AND HAMMER is deafening'   
+300                                b"the second armie hammer didn't win a golden globe i heard glass violently shattering in the apartment above me"   
+301                                                      b'timothe chalamet: was snubbed \nArmie Hammer: was snubbed \n#GoldenGlobes : is cancelled'   
+302                                                                                              b'why is armie hammers name that tho #GoldenGlobes'   
+303                                                                                   b'would have liked to see Armie Hammer up there #GoldenGlobes'   
+
+     id_str  
+0         1  
+1         1  
+2         1  
+3         1  
+4         1  
+5         1  
+6         1  
+7         1  
+8         1  
+9         1  
+10        1  
+11        1  
+12        1  
+13        1  
+14        1  
+15        1  
+16        1  
+17        1  
+18        1  
+19        1  
+20        1  
+21        1  
+22        1  
+23        1  
+24        1  
+25        1  
+26        1  
+27        1  
+28        1  
+29        1  
+..      ...  
+274       1  
+275       1  
+276       1  
+277       1  
+278       1  
+279       1  
+280       1  
+281       1  
+282       1  
+283       1  
+284       1  
+285       1  
+286       1  
+287       1  
+288       1  
+289       1  
+290       1  
+291       1  
+292       1  
+293       1  
+294       1  
+295       1  
+296       1  
+297       1  
+298       1  
+299       1  
+300       1  
+301       1  
+302       1  
+303       1  
+
+[304 rows x 2 columns]
+
+
+
+ Nominee Seperator 
+
+
+
+                                                                                                                                               text  \
+0                                                     b'"Yes, let\'s give it up for Time\'s Up!"\n\n[camera cuts to Richard Jenkins] #GoldenGlobes'   
+1                                                                                  b'(Bill Bodkin) Richard Jenkins should take this. #GoldenGlobes'   
+2   b'I also loved Willem Dafoe &amp; Richard Jenkins in their roles... like ALOT. ALSO MICHAEL STUHLBARG SHOULD HAVE BEEN NOMINATED #goldenglobes'   
+3                                                                                         b'I love Willem Defoe and Richard Jenkins. #GoldenGlobes'   
+4                  b'I love this man.  Richard Jenkins was great in #DearJohn and #FriendsWithBenefits #fwb  #GoldenGlobes https://t.co/Ijf6ZCpgvi'   
+5                                                                                                       b"I'd marry Richard Jenkins. #goldenglobes"   
+6                                                                                             b'Ill always root for Richard Jenkins\n#GoldenGlobes'   
+7     b'James Taylor could be the seat filler for Richard Jenkins the entire #GoldenGlobes show and no one would know. #YouveGotATwin #FireAndSame'   
+8                                                             b'RICHARD JENKINS IS NOT GETTING ENOUGH CREDIT WHERE CREDIT IS DUE. K. #GoldenGlobes'   
+9    b'RT @BrianJaeger: James Taylor could be the seat filler for Richard Jenkins the entire #GoldenGlobes show and no one would know. #YouveGotAT'   
+10  b'RT @THR: Best Supporting Actor nominee Richard Jenkins on wearing black for the #TimesUp movement: "It\'s a way for this industry to say som'   
+11    b"RT @WGLTNews: GLT's Judy Valente spoke with Golden Globe nominee Richard Jenkins (an @IL_Wesleyan grad) about his #BloNo days and his life"   
+12                                                               b"RT @brendonwalsh: Richard Jenkins should've won for Step Brothers #GoldenGlobes"   
+13                              b'Richard Jenkins on The All Black Anti-Harassment Red Carpet Attire at Go... https://t.co/i0W93V6ONO via @YouTube'   
+14                              b'Richard Jenkins on The All Black Anti-Harassment Red Carpet Attire at Go... https://t.co/qTLJ42vWQR via @YouTube'   
+15                                                                                                       b'Richard Jenkins will win! #GoldenGlobes'   
+16        b"Sam Rockwell wins for Three Billboards....okay... I ain't mad but I ain't happy either! Was rooting for Richard Jenkins! #GoldenGlobes"   
+17      b'Supporting Actor - Motion Picture nominees: Willem Dafoe, Armie Hammer, Richard Jenkins, Christopher Plummer, Sam Rockwell #GoldenGlobes'   
+18                                 b'Three Billboards was great and Sam Rockwell was great in it but my heart wanted Richard Jenkins #GoldenGlobes'   
+19                                                                                               b'Weird way to say Richard Jenkins? #GoldenGlobes'   
+20                                                              b"i've loved richard jenkins for so long. he can play any character. #GoldenGlobes"   
+
+    id_str  

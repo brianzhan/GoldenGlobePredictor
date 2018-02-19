@@ -1,0 +1,428 @@
+Last login: Sun Feb 18 19:27:24 on ttys001
+Brians-MBP:GGProject brianzhan$ python3 golden_globe.py 
+                                                                                                                                               text  \
+0                                          b' yawn Meryl Streep, Emma Stone and more bringing activists to Golden Globes\n https://t.co/nMZFE1tNFm'   
+1                               b'#EOnline  Emma Stone, Meryl Streep and More Actresses Set to Walk the 2018 Golden Globes https://t.co/YWNFqbTjhE'   
+2                                               b'#GoldenGlobes Can we take a moment to acknowledge how hot Emma Stone is? https://t.co/RncVHxullg'   
+3                                                                                                            b'#GoldenGlobes Emma stone por favor '   
+4                                     b"#GoldenGlobes Jessica Chastain, Octavia Spencer , Emma Stone IT SEEMS LIKE WE'RE GETTING THE HELP REUION !"   
+5                     b"#GoldenGlobes So glad Lady Bird won.. I'm tired of Emma Stone.. Funny how I don't find her to be a good actress. Oh well.."   
+6                                     b'#GoldenGlobes Things Emma Stone, Caitriona Balfe, Shailene Woodley and Reese Witherspoon deserved: to win.'   
+7                                                               b'#GoldenGlobes | Emma Stone y Billie Jean King  #LaLaLand https://t.co/KUj77nEEMP'   
+8                                                                                             b'#GoldenGlobes ~Emma Stone brought Billie Jean King'   
+9                                            b'#ICYMI Emma Stone walked the #GoldenGlobes red carpet with Billie Jean King https://t.co/8DyKXeIR9R'   
+10                              b'#NEWS Emma Stone, Meryl Streep and More Actresses Set to Walk the 2018 Golden Globes Red https://t.co/CS2pTDpc31'   
+11                              b'#NEWS Emma Stone, Meryl Streep and More Actresses Set to Walk the 2018 Golden Globes Red https://t.co/S1oxXEyfqT'   
+12                      b'#WhyWeWearBlack because Emma Stone has to be 700x as talented as Carson Daly to be in the same room as him #GoldenGlobes'   
+13                                                             b'07/01/18 Emma Stone &amp; Billie Jean King  #GoldenGlobes https://t.co/f3htbk9JME'   
+14                            b"@BillieJeanKing and Emma Stone interviewing together on the Red Carpet in #black... aaand I'm crying #GoldenGlobes"   
+15                                                     b'@Lindt_Chocolate A4) Emma Stone, Helen Miren, Tom Hanks! #GoldenGlobes #LindtGoldenGlobes'   
+16                                                                                                   b'@MelRivers best dressed nominee: Emma Stone'   
+17                                                                        b'@MelRivers best dressed nominee: Emma Stone #FashionPolice #JoanRivers'   
+18                        b'@MovieMantz interviews Billie Jean King and Emma Stone on the red carpet at the Golden Globes. https://t.co/uZWu1mIjGL'   
+19                                                          b'@_ThisIsVals_ I love emma stone and i totally agree! #GoldenGlobes #GoldenGlobes2018'   
+20                                             b'@enews Hey, Emma Stone- Who would you be most starstruck to see at the Golden Globes? #ERedCarpet'   
+21                    b'A female director should direct a movie starring Natalie Portman, Jessica Chastain, and Emma Stone. #GoldenGlobes #TIMESUP'   
+22                                              b'Allison Brie, Gal Gadot, Emma Stone - appreciation tweet of their red carpet looks #GoldenGlobes'   
+23                                                         b'BILLIE JEAN KING AND EMMA STONE I TURNED ON THE TV AT THE CORRECT TIME. #GoldenGlobes'   
+24                                                                                                         b'Beautiful Emma Stone!!  #GoldenGlobes'   
+25                                                     b'Billie Jean King &amp; Emma Stone \n#WhyWeWearBlack #GoldenGlobes https://t.co/xBxpoSQGj9'   
+26                                       b'Billie Jean King With Emma Stone At #GoldenGlobes NOW - Watch Live Stream Here! https://t.co/YVl7NmnmYI'   
+27                                                        b'Billie Jean King acompaado a Emma Stone a los Golden Globes... Battle of the Sexes... '   
+28                                                        b'Billie Jean King and Emma Stone! #GoldenGlobes @CBSThisMorning https://t.co/HnSPpttHW5'   
+29                                                       b'Buddy comedy with Shirley MacLaine + Emma Stone, MAKE IT HAPPEN HOLLYWOOD #GoldenGlobes'   
+..                                                                                                                                              ...   
+384                                                                             b'Watching Golden Globes. Boyfriend: Id leave you for Emma Stone. '   
+385                        b'When Emma stone had THE NERVE to say James francos name instead of Hugh Jackman #GoldenGlobes https://t.co/5aVctPSCGS'   
+386                                                                                         b'Who the hell did Emma Stoness make up!? #GoldenGlobe'   
+387                                                                                b'Whoever is nominated, Im voting for Emma Stone! #GoldenGlobes'   
+388                                                         b'Why are we still trying to make Emma Stone happen like its still 2012? #goldenglobes'   
+389                                                                                 b'Why dont they ask Emma Stone about Adam Venit? #GoldenGlobes'   
+390                                          b'Will Emma Stone be raising this activism with her colleague Mr Allen or...? https://t.co/1PmYHZfwvr'   
+391                                                                          b'Would see an Emma Stone/Shirley MacLaine buddy comedy #GoldenGlobes'   
+392                                  b'Wow! Emma Stone &amp; Billie Jean King... cannot love this enough...  #GoldenGlobes https://t.co/QUTtiIUc53'   
+393                                                                                                                b'Y Emma Stone??? #GoldenGlobes'   
+394                                                   b'Yaasssss! My Girl Emma Stone! #GoldenGlobes #EmmaStone #CelebWaifu https://t.co/gdJY8Z80cN'   
+395            b'You know during my rewatch of The Apartment I wondered how Emma Stone would approach Fran Kubelik, so there you go. #goldenglobes'   
+396                                                                                        b'Yup. Still very in love with Emma Stone #GoldenGlobes'   
+397                 b'as much as i love emma stone but her bringing an activist to the golden globes is odd when she has worked for woody allen :/'   
+398                                           b'cut to lorne michaels as he refuses to clap for emma stone and shirley maclaine. wtf #goldenglobes'   
+399                                             b'emma stone bringing billie jean king as her date to the golden globes is what dreams are made of'   
+400                                            b'emma stone has billie jean king with her at the golden globes no offense but id die for them BOTH'   
+401                                                                              b'emma stone is a queen  and congrats james franco  #GoldenGlobes'   
+402                                                                           b'emma stones category is so close and i am so nervous #GoldenGlobes'   
+403      b'https://t.co/n0gWQvhNWR Emma Stone brings Billie Jean King to Golden Globe Awards https://t.co/KtvTDRRvol #news https://t.co/YbGolZR8yT'   
+404                                                                                     b'i need to see emma stone and margot robbie #GoldenGlobes'   
+405                                                                              b'i need to see some more emma stone action tonight #GoldenGlobes'   
+406                                        b'if emma stone and andrew garfield actually arrive together at the #GoldenGlobes i am going to explode'   
+407                                     b'justin timberlake\nemma stone\ntimothee whatever the fuck his crusty ass name is https://t.co/k0cxfO4OnQ'   
+408                                                                              b'me waiting for emma stone #GoldenGlobes https://t.co/8UseHJa5tm'   
+409                                                                  b'never forget emma stone at the 2017 golden globes.  https://t.co/wtuu4yyE8S'   
+410                                                                                  b'oh yes!!!! EMMA STONE #GoldenGlobes https://t.co/w5R0k8EDh6'   
+411                                                                      b"she's there to pick up the oscar emma stone has https://t.co/tmIRHyD8XD"   
+412  b"these photos of emma stone are so high quality you can zoom in and see all the flaws she doesn't have #goldenglobes https://t.co/RU6V5XEMpj"   
+413                                                                                            b'this gown Emma Stone is in &gt;&gt; #GoldenGlobes'   
+
+     id_str  
+0         1  
+1         1  
+2         1  
+3         1  
+4         1  
+5         1  
+6         1  
+7         1  
+8         1  
+9         1  
+10        1  
+11        1  
+12        1  
+13        1  
+14        1  
+15        1  
+16        1  
+17        1  
+18        1  
+19        1  
+20        1  
+21        1  
+22        1  
+23        1  
+24        1  
+25        1  
+26        1  
+27        1  
+28        1  
+29        1  
+..      ...  
+384       1  
+385       1  
+386       1  
+387       1  
+388       1  
+389       1  
+390       1  
+391       1  
+392       1  
+393       1  
+394       1  
+395       1  
+396       1  
+397       1  
+398       1  
+399       1  
+400       1  
+401       1  
+402       1  
+403       1  
+404       1  
+405       1  
+406       1  
+407       1  
+408       1  
+409       1  
+410       1  
+411       1  
+412       1  
+413       1  
+
+[414 rows x 2 columns]
+
+
+
+ Nominee Seperator 
+
+
+
+                                                                                                                                                 text  \
+0                                                              b'#replytweet do you think Judi Dench will show up to the #GoldenGlobes ? Stay tuned.'   
+1                                                                    b'@goldenglobes seriously? Did you focus on Helen Mirren instead of Judi Dench?'   
+2                       b'BTW, anybody else notice that the camera panned to Helen Mirren when they announced Judi Denchs nomination? #GoldenGlobes '   
+3                                                              b'For the record, @goldenglobes Helen Mirren is NOT Judi Dench. #notalldameslookalike'   
+4                                                  b'Judi Dench and Helen Mirren in the same award in the same year? Already a winner. #GoldenGlobes'   
+5                                           b'Judi Dench for Victoria &amp; Abdul...\n*cut to Helen Mirren*\n\n#GoldenGlobes https://t.co/wKMixte4B4'   
+6                                                                                                              b'Judi Dench got robbed #GoldenGlobes'   
+7                                                                                     b'Quick--someone show @GoldenGlobes a picture of Judi Dench!! '   
+8  b"RT @THR: #GoldenGlobes: Saoirse Ronan wins Best Actress for 'Lady Bird,' beating out Judi Dench (Victoria &amp; Abdul), Helen Mirren (The Leisu"   
+9                                                                                                               b'Thats not Judi Dench #goldenglobes'   
+
+   id_str  
+0       1  
+1       1  
+2       1  
+3       1  
+4       1  
+5       1  
+6       1  
+7       1  
+8      19  
+9       1  
+
+
+
+ Nominee Seperator 
+
+
+
+                                                                                                                                               text  \
+0               b' pocblog: Viola Davis and Helen Mirren on stage at the 75th Annual Golden Globe Awards Viola Davis is... https://t.co/9C3n8p7YTa'   
+1                                 b' pocblog: Viola Davis and Helen Mirren on stage at the 75th Annual Golden Globe Awards https://t.co/WhXIAPN8iK'   
+2                                       b'"Washed out? Sometimes. Washed up? Never" -- L\'Oreal ad with Helen Mirren; I\'m engrossed #GoldenGlobes'   
+3                                                                              b'#GoldenGlobes  Helen Mirren and Viola Davis two amazing ladies !!'   
+4                                                                                               b'#GoldenGlobes Helen Mirren is a fucking Goddess.'   
+5                                                                            b'#GoldenGlobes Helen Mirren thinks that date rape can be worked out.'   
+6                                             b'#GoldenGlobes Umm focusing on Helen Mirren while mentioning Judy Dench?? #notthesamebritishactress'   
+7                                    b'#goldenglobes Fashion comment: Yes Nicole Kidman, yes Helen Mirren, not so much Gal Gadot tho I still  you.'   
+8                   b".@violadavis &amp; Helen Mirren are amazing! When does #Widows come out? I can't wait! #GoldenGlobes https://t.co/59DhKqBeuD"   
+9                                                                      b'@fivefifths The nominee was Judy Dench....and they panned to Helen Mirren'   
+10                                          b'@goldenglobes @3Billboards Yeah, Sam!! And Helen Mirren, wow, you are just a beautiful, class act.  '   
+11                                                                 b'@goldenglobes seriously? Did you focus on Helen Mirren instead of Judi Dench?'   
+12                              b'@violadavis &amp; Helen Mirren are giving me life right now. So beautiful  #goldenglobes https://t.co/tJ6EAzsmNB'   
+13                                  b'And now Viola Davis and Helen Mirren... Can this also be a movie? About them ruling the world? #GoldenGlobes'   
+14                                                        b'And when does the Viola Davis and Helen Mirren buddy cop movie come out? #GoldenGlobes'   
+15                                                                               b'BOW DOWN FOR THE ONE TRUE QUEEN, HELEN MIRREN \n\n#GoldenGlobes'   
+16                    b'BTW, anybody else notice that the camera panned to Helen Mirren when they announced Judi Denchs nomination? #GoldenGlobes '   
+17                                                                b'Be still my heart, Viola Davis and Helen Mirren TOGETHER !?!!!   #GoldenGlobes'   
+18                                                                      b'Buddy cop movie starring Helen Mirren and Viola Davis, NOW #GoldenGlobes'   
+19                                                                                             b'CAN I COP HELEN MIRRENS LOOK *NOW*? #GoldenGlobes'   
+20                                                              b'Can Helen Mirren just stand on the stage for the rest of the show? #goldenglobes'   
+21                                        b"Can I please have Helen Mirren's figure when I get her age. She never fails to deliver.  #GoldenGlobes"   
+22                                                                           b'Can I please have Helen Mirrens bod when I get there? #GoldenGlobes'   
+23                                                   b'Can someone please get Helen Mirren and Viola Davis in a film together ASAP?! #goldenglobes'   
+24                                                                                    b'Can we get a Viola Davis/Helen Mirren movie? #GoldenGlobes'   
+25                                      b'Could be that Dame Helen Mirren and Meryl Streep are one and the same. Iconic actors both! #GoldenGlobes'   
+26                                                                                            b'Damn Helen Mirren is one hot dame!!! #goldenglobes'   
+27                                               b'First of all, Helen Mirren, that dress. \nSecond of all, Viola Davis, that fro. \n#GoldenGlobes'   
+28                                                           b'For the record, @goldenglobes Helen Mirren is NOT Judi Dench. #notalldameslookalike'   
+29                                                              b'Gimme that buddy comedy starring Helen Mirren and Viola Davis stat #goldenglobes'   
+..                                                                                                                                              ...   
+216                                                                                    b'Viola Davis and Helen Mirren are goddesses. #goldenglobes'   
+217                                           b'Viola Davis and Helen Mirren are presenting together so Twitter is about to explode. #GoldenGlobes'   
+218             b'Viola Davis and Helen Mirren in the same frame is just...everything I want to be when I grow up. #GoldenGlobes #GoldenGlobes2018'   
+219                                                            b'Viola Davis and Helen Mirren lookin fierce! #GoldenGlobes https://t.co/wzyIibRb37'   
+220                                                            b'Viola Davis and Helen Mirren looking even more glorious than usual. #GoldenGlobes'   
+221                                                                   b'Viola Davis and Helen Mirren need to be in a movie together. #GoldenGlobes'   
+222                                   b'Viola Davis and Helen Mirren on stage together is exactly what I needed in my life. #GoldenGlobes #blessed'   
+223                                          b'Viola Davis and Helen Mirren please do a movie together pleeeaseee! #GoldenGlobes #GoldenGlobes2018'   
+224                                                             b'Viola Davis and Helen Mirren presenting together? Talk about POWER #goldenglobes'   
+225                                            b'Viola Davis and Helen Mirren should do a movie together. Or a never ending TV show. #GoldenGlobes'   
+226                                                                                          b'Viola Davis and Helen Mirren slaaying #GoldenGlobes'   
+227                                                          b'Viola Davis and Helen Mirren together? Slay.  #GoldenGlobes https://t.co/7vws2wUtwm'   
+228                                                                         b'Viola Davis and Helen Mirren! Two more powerful Women! #GoldenGlobes'   
+229                                                                     b'Viola Davis and Helen Mirren, the duo we need and deserve  #GoldenGlobes'   
+230                                                                b'Viola Davis and Helen Mirren. Best presenter combo of all time. #goldenglobes'   
+231                                              b'Viola Davis and Helen Mirren. Serious women, so talented. #GoldenGlobes https://t.co/qBrUmvN5tK'   
+232    b"Viola Davis and Helen Mirren? Also two women I'd love to see working together. Also two women I just want to hang out with. #GoldenGlobes"   
+233                                                                        b'WHERE ARE YOU DAME HELEN MIRREN #goldenglobes https://t.co/UKcO6buQhI'   
+234                                                                                b'WOW! Viola &amp; Helen Mirren....HELLZ YEAH!!!! #GoldenGlobes'   
+235                                                    b'Whenever I see Helen Mirren this is what I think of #GoldenGlobes https://t.co/dQwtxLKnpH'   
+236                                                 b'Wow, Helen Mirren looks lovely as always, but damn, Viola Davis looks AMAZING. #GoldenGlobes'   
+237                                                                   b'Yo I LOVE Helen Mirren.  Id marry her tomorrow if she asked. #GoldenGlobes'   
+238   b'[Helen Mirren and Viola Davis come out]\n@notjustanyboggs: A movie with both of them. ANY genre.\nMe: Call Me By Your Name 2 #GoldenGlobes'   
+239         b'everybody knows that I live for Helen Mirren and seriosly, @violadavis? come THROUGH with this fashion, body and hair! #goldenglobes'   
+240  b'helen mirren and gillian anderson I just want a picture of helen mirren and gillian anderson together is that too much to asK #GoldenGlobes'   
+241                                    b'helen mirren casually flaunting her fan on the red carpet is a mood #goldenglobes https://t.co/20XR7LH0Lc'   
+242                                             b'i want a buddy comedy with viola davis and helen mirren more than anything, thanks #GoldenGlobes'   
+243                                                                                                              b'love Helen Mirren #GoldenGlobes'   
+244                      b'still shaking in bed from viola davis and helen mirren occupying that stage at the same legendary moment. #goldenglobes'   
+245                                                         b'viola davis and helen mirren together on stage #GoldenGlobes https://t.co/OE30Lok6yz'   
+
+     id_str  
+0         1  
+1         1  
+2         1  
+3         1  
+4         1  
+5         1  
+6         1  
+7         1  
+8         1  
+9         1  
+10        1  
+11        1  
+12        1  
+13        1  
+14        1  
+15        1  
+16        1  
+17        1  
+18        1  
+19        1  
+20        1  
+21        1  
+22        1  
+23        1  
+24        1  
+25        1  
+26        1  
+27        1  
+28        1  
+29        1  
+..      ...  
+216       1  
+217       1  
+218       1  
+219       1  
+220       1  
+221       1  
+222       1  
+223       1  
+224       1  
+225       1  
+226       1  
+227       1  
+228       1  
+229       1  
+230       1  
+231       1  
+232       1  
+233       1  
+234       1  
+235       1  
+236       1  
+237       1  
+238       1  
+239       1  
+240       1  
+241       1  
+242       1  
+243       1  
+244       1  
+245       1  
+
+[246 rows x 2 columns]
+
+
+
+ Nominee Seperator 
+
+
+
+                                                                                                                                                  text  \
+0                                                                                 b' Margot Robbie I just cant. #GoldenGlobes https://t.co/IfjekPHHB5'   
+1                                                   b' Margot Robbie being an absolute cutie at the 75th Annual Golden Globes https://t.co/yCqvIxlUSE'   
+2                                                               b' Margot Robbie was robbed! She was amazing as Tonya Harding! #ITonya  #GoldenGlobes'   
+3                           b' RT @FashionweekNYC: Margot Robbie looks AMAZING in @Gucci at the Golden Globes #WhyWeWearBlack https://t.co/K6JSIwo28t'   
+4                                    b' mcavoys: MARGOT ROBBIE 75th Annual Golden Globe Awards, Los Angeles | January 7, 2018 https://t.co/3EOF1PM0f6'   
+5                                    b' mcavoys: MARGOT ROBBIE 75th Annual Golden Globe Awards, Los Angeles | January 7, 2018 https://t.co/bQ1DquL9Mn'   
+6                                                        b'"God damnit....Margot Robbie couldn\'t play me? Fucking Golden Globes...." -Nancy Kerrigan'   
+7                           b'#EOnline #RedCarpet\nTo Margot Robbie: Do you want to come to Mexico in a Premiere?  What do you can say about Harley? '   
+8    b'#Fashion Industry - Best Dressed At Golden Globes: Margot Robbie, Reese Witherspoon &amp; More https://t.co/fTSGQ1QmCp https://t.co/hy3ZNil2st'   
+9                               b'#GoldenGlobes #WhyWeWearBlack\n\nMargot Robbie sparkled in a custom @Gucci gown\n\n#Fashion https://t.co/yiB4BusgLr'   
+10                                                       b'#GoldenGlobes my bets are on Timothe Chalamet and Margot Robbie for the lead acting awards'   
+11                                             b'#goldenglobes Margot Robbie is going to show up late to remind everyone that https://t.co/YORB3TiV3Y'   
+12                                                  b'(but god damn was i rooting for margot robbie lol her performance was phenomenal) #goldenglobes'   
+13                                                                                                 b'@EOnlineStyle #redcarpet Wheres Margot Robbie???'   
+14                                                      b'@GraceRandolph While I wish Margot Robbie won I was Happy Ronan won over the other nominees'   
+15                                                                        b'@TNTLA #GoldenGlobesEnTNT \n#GoldenGlobes2018 #GoldenGlobes Margot Robbie'   
+16                                    b"@TheKittensMeow Gtfo. It wasn't funny #LadyBird and yes Margot Robbie should have won.  #RIGGED #GoldenGlobes"   
+17                                                       b'@infamousmargot @MargotRobbie Margot Robbies dress is beautiful!!!! #TimesUp #GoldenGlobes'   
+18                                                           b'@people Pull a Seinfeld on Margot Robbie #GoldenGlobes awards! https://t.co/clt6wgv6ck'   
+19                                                                                                  b'A WILD MARGOT ROBBIE WAS SPOTTED  #GoldenGlobes'   
+20                                                                  b'A close up of Margot Robbies Gucci dress  #GoldenGlobes https://t.co/5qzYCsFu5c'   
+21                                                b'All I care about at the Golden Globes is Baron Davis, Margot Robbie, and Dougie Jones. #CaseFiles'   
+22                     b'All of the #GoldenGlobe arrivals, including Reese Witherspoon, Tracee Ellis Ross, and Margot Robbie: https://t.co/48Shbwrg19'   
+23                                                                     b'Allison Janney loving all over Margot Robbie was so beautiful. #GoldenGlobes'   
+24        b"Allison Janney wins Best Supporting Actress. Worried the 'Margot Robbie beats Saoirse Ronan' nightmare might come true now. #GoldenGlobes"   
+25                          b'And Allison Janney is giving a fiery speech. Shes also gushing about Margot Robbie. Its truly stupendous. #GoldenGlobes'   
+26                                                                                       b"And Margot Robbie's Golden Globe goes to... Saoirse Ronan."   
+27                             b'Best Actress Comedy: Prediction: Margot Robbie #ITonya Should Be: \nSaoirse Ronan #LadyBird #GoldenGlobes #JJReviews'   
+28                                               b'Best Dressed At Golden Globes: Margot Robbie, Reese Witherspoon &amp; More https://t.co/PEwb6kKFCY'   
+29                                               b'Best Dressed At Golden Globes: Margot Robbie, Reese Witherspoon &amp; More https://t.co/dWWHnD6eCD'   
+..                                                                                                                                                 ...   
+427                                                             b'margot robbie attends the 75th annual golden globes (01.07) https://t.co/4YG9DAPpy5'   
+428                                                                    b'margot robbie deserved best actress in a comedy golden globe but whatever ok'   
+429                                                                            b'margot robbie going to get that golden globe https://t.co/4yF3eWWsP3'   
+430                                                                                   b'margot robbie holy fuck #goldenglobes https://t.co/UVdeg6Ql9B'   
+431                                                                                                               b'margot robbie icone #GoldenGlobes'   
+432                                  b'margot robbie is going to own this golden globes ass this year prepare yourself ladies https://t.co/Ro9bYm03LI'   
+433                                                       b'margot robbie is on her way to snatching that award #goldenglobes https://t.co/vusZMNmtk9'   
+434                          b'margot robbie just owned the entire golden globes and she hasnt even arrived yet #GoldenGlobes https://t.co/Ynu6grQc0z'   
+435    b'margot robbie may not have won at the #GoldenGlobes but she is going to snatch awards at the Oscars and then it will be over for you bitches'   
+436                                             b'margot robbie really deserved that golden globe i hope there are lots of awards coming for her soon'   
+437                                                                                   b'margot robbie right now #GoldenGlobes https://t.co/lGQGJ2gKgn'   
+438                                b'margot robbie snapped and she will snap again when she wins for i, tonya. the stage is yours queen #GoldenGlobes'   
+439                                                                                       b'margot robbie snatch that golden globe and feed my family'   
+440                                                                                      b'margot robbie yesss  #goldenglobes https://t.co/DHyeYi1IMY'   
+441                                                     b'margot robbie, kristin cavallari and dakota johnson all slayed the red carpet looks tonight'   
+442                                    b'me, hosting golden globes: i see margot robbie is here tonight. *applause* thank you. i see dunkirk is here.'   
+443                                                                      b'miss Margot Robbie is coming for that golden globe https://t.co/1pIudfKANr'   
+444                                                                               b'miss margot robbie did that #goldenglobes https://t.co/K6LERi7fjD'   
+445                                                                     b'miss margot robbie killed me #GoldenGlobes #TIMESUP https://t.co/dcjWvxrYZT'   
+446                                                                                          b'not giving margot robbie a golden globe is lesbophobic'   
+447                                         b'not wanting to be dramatic, but margot robbie is a work of art... #GoldenGlobes https://t.co/s763Ie8emf'   
+448                                                        b'nothing against Margot Robbie, but @katya_zamo shouldve stared in I, Tonya #GoldenGlobes'   
+449                                                                                               b'okay Margot Robbie or Saoirse Ronan #GoldenGlobes'   
+450                                                                                                            b'same per margot robbie #GoldenGlobes'   
+451                                                                  b'sebastian stan, allison janney and margot robbie!! i, tonya ftw! #GoldenGlobes'   
+452          b'seeing true blue, dinky di, honest Aussie battler Margot Robbie completely take over Hollywood makes me so bloody proud. #GoldenGlobes'   
+453                  b'sending good energies to Kyle Maclachlan, Margot Robbie &amp; Chris Nolan so that they all get the golden globes they deserve '   
+454                                                                                                       b'so margot robbie was stolen #GoldenGlobes'   
+455                                                                                  b'someone tell me when miss margot robbie shows up #GoldenGlobes'   
+456                                                                      b'what on fresh hell is soon to be golden globe winner margot robbie wearing'   
+
+     id_str  
+0         1  
+1         1  
+2         1  
+3         1  
+4         1  
+5         1  
+6         1  
+7         1  
+8         1  
+9         1  
+10        1  
+11        1  
+12        1  
+13        1  
+14        1  
+15        1  
+16        1  
+17        1  
+18        1  
+19        1  
+20        1  
+21        1  
+22        1  
+23        1  
+24        1  
+25        1  
+26        1  
+27        1  
+28        1  
+29        1  
+..      ...  
+427       1  
+428       1  
+429       1  
+430       1  
+431       1  
+432       1  
+433       1  
+434       1  
+435       1  
+436       1  
+437       1  
+438       1  
+439       1  
+440       1  
+441       1  
+442       1  
+443       1  
+444       1  
+445       1  
+446       1  
+447       1  
+448       1  
+449       1  
+450       1  
+451       1  
+452       1  
+453       1  
+454       1  
+455       1  
+456       1  
+
+[457 rows x 2 columns]
+Brians-MBP:GGProject brianzhan$ 

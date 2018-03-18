@@ -9,6 +9,7 @@ from collections import Counter
 import os.path
 import pandas as pd
 import numpy as np
+from pprint import pprint
 
 
 stop = stopwords.words('english')
@@ -20,7 +21,7 @@ pd.options.display.max_colwidth = 400
 # Motion Picture Awards
 mAwards = ['Best Motion Picture - Drama','Best Motion Picture - Musical or Comedy','Best Actor - Motion Picture Drama', 'Best Actress - Motion Picture Drama', 'Best Actor - Motion Picture Musical or Comedy',
 'Best Actress - Motion Picture Musical or Comedy','Best Supporting Actor - Motion Picture', 'Best Supporting Actress - Motion Picture', 'Best Director',
-'Best Screenplay','Best Original Score','Best Original Song', 'Best Animated Feature Film', 'Best Foreign Language Film', 'Best Director']
+'Best Screenplay','Best Original Score','Best Original Song', 'Best Animated Feature Film', 'Best Foreign Language Film']
 
 # Television Awards
 tAwards = ['Best Drama Series','Best Comedy Series','Best Actor in a Television Drama Series', 'Best Actress in a Television Drama Series', 'Best Actor in a Television Comedy Series',
@@ -57,7 +58,9 @@ class Award:
 		self.voting_dict = voting_dict
 		self.filtered_sentence = filtered_sentence
 
-	def print_award(self):
+	def print_award(self, curr_awards):
+		with open('gg2018_blankformat.json') as data_file:
+			data = json.load(data_file)
 		award_json = {}
 		# award_json['name'] = self.name
 		award_json['winner'] = self.winner

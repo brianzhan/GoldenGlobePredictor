@@ -18,15 +18,15 @@ pd.options.display.max_colwidth = 400
 
 
 # Motion Picture Awards
-mAwards = ['Best Motion Picture - Drama','Best Motion Picture - Musical or Comedy','Best Director','Best Actor - Motion Picture Drama','Best Actor - Motion Picture Musical or Comedy',
-'Best Actress - Motion Picture Drama','Best Actress - Motion Picture Musical or Comedy','Best Supporting Actor - Motion Picture','Best Supporting Actress - Motion Picture',
-'Best Screenplay','Best Original Score','Best Foreign Language Film','Best Animated Feature Film','Cecil B. DeMille Lifetime Achievement Award', 'Best Original Song']
+mAwards = ['Best Motion Picture - Drama','Best Motion Picture - Musical or Comedy','Best Actor - Motion Picture Drama', 'Best Actress - Motion Picture Drama', 'Best Actor - Motion Picture Musical or Comedy',
+'Best Actress - Motion Picture Musical or Comedy','Best Supporting Actor - Motion Picture', 'Best Supporting Actress - Motion Picture', 'Best Director',
+'Best Screenplay','Best Original Score','Best Animated Feature Film', 'Best Foreign Language Film', 'Best Original Song', 'Best Director']
 
 # Television Awards
 tAwards = ['Best Drama Series','Best Comedy Series','Best Actor in a Television Drama Series','Best Actor in a Television Comedy Series','Best Actress in a Television Drama Series',
 'Best Actress in a Television Comedy Series','Best Limited Series or Motion Picture made for Television','Best Actor in a Limited Series made for Television',
 'Best Actress in a Limited Series made for Television','Best Supporting Actor in a Limited Series made for Television',
-'Best Supporting Actress in a Limited Series made for Television']
+'Best Supporting Actress in a Limited Series made for Television', 'Cecil B. DeMille Lifetime Achievement Award']
 
 abbreviations = {'television':'tv','motion':'movie','picture':'movie','film':'movie'}
 
@@ -58,13 +58,20 @@ class Award:
 		self.filtered_sentence = filtered_sentence
 
 	def print_award(self):
-		print('Award: {}'.format(self.name))
-		# print('Presented By: {}'.format(', '.join(self.presenters)))
-		# print('Nominees: {}'.format(', '.join(self.nominees)))
-		print('Winner votes: {}'.format(self.voting_dict[1]))
-		print('Presenter votes: {}'.format(self.voting_dict[2]))
-		print('Nominee votes: {}'.format(self.voting_dict[3]))
-		print('Winner: {}\n'.format(self.winner))
+		award_json = {}
+		# award_json['name'] = self.name
+		award_json['winner'] = self.winner
+		award_json['presenter'] = self.voting_dict[2]
+		award_json['nominee'] = self.voting_dict[3]
+		return award_json
+
+		# print('Award: {}'.format(self.name))
+		# # print('Presented By: {}'.format(', '.join(self.presenters)))
+		# # print('Nominees: {}'.format(', '.join(self.nominees)))
+		# print('Winner votes: {}'.format(self.voting_dict[1]))
+		# print('Presenter votes: {}'.format(self.voting_dict[2]))
+		# print('Nominee votes: {}'.format(self.voting_dict[3]))
+		# print('Winner: {}\n'.format(self.winner))
 
 
 
@@ -399,11 +406,15 @@ def findHost(dataframe):
 	voting_dict = resolve_voting_dict(voting_dict)
 	host_name = max(voting_dict, key=lambda key: voting_dict[key])
 	print("\nThe host of Golden Globe is: {}".format(host_name))
+	return host_name
 
-def print_results():
-	print("\n Printing Final Results \n")
+def print_results(dataframe):
+	final_list = {}
+	final_list["Host"] = findHost(dataframe)
+	print("\n Printing Final Results as JSON \n")
 	for award in Award_list:
-		award.print_award()
+		final_list[award.name] = award.print_award()
+	print(final_list)
 
 def initializeJSONfile(path):
 	# Check whether the simplified JSON files exist, if not, generate it
@@ -431,7 +442,7 @@ def main():
 	get_results()
 	findNominee(dataframe)
 	findHost(dataframe)
-	print_results()
+	print_results(dataframe)
 	t1 = time.time()
 	print("\nTotal Running Time: {}".format(t1-t0))
 

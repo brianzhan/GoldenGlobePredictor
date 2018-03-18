@@ -20,13 +20,13 @@ pd.options.display.max_colwidth = 400
 # Motion Picture Awards
 mAwards = ['Best Motion Picture - Drama','Best Motion Picture - Musical or Comedy','Best Actor - Motion Picture Drama', 'Best Actress - Motion Picture Drama', 'Best Actor - Motion Picture Musical or Comedy',
 'Best Actress - Motion Picture Musical or Comedy','Best Supporting Actor - Motion Picture', 'Best Supporting Actress - Motion Picture', 'Best Director',
-'Best Screenplay','Best Original Score','Best Animated Feature Film', 'Best Foreign Language Film', 'Best Original Song', 'Best Director']
+'Best Screenplay','Best Original Score','Best Original Song', 'Best Animated Feature Film', 'Best Foreign Language Film', 'Best Director']
 
 # Television Awards
-tAwards = ['Best Drama Series','Best Comedy Series','Best Actor in a Television Drama Series','Best Actor in a Television Comedy Series','Best Actress in a Television Drama Series',
-'Best Actress in a Television Comedy Series','Best Limited Series or Motion Picture made for Television','Best Actor in a Limited Series made for Television',
+tAwards = ['Best Drama Series','Best Comedy Series','Best Actor in a Television Drama Series', 'Best Actress in a Television Drama Series', 'Best Actor in a Television Comedy Series',
+'Best Actress in a Television Comedy Series','Best Actor in a Limited Series made for Television',
 'Best Actress in a Limited Series made for Television','Best Supporting Actor in a Limited Series made for Television',
-'Best Supporting Actress in a Limited Series made for Television', 'Cecil B. DeMille Lifetime Achievement Award']
+'Best Supporting Actress in a Limited Series made for Television', 'Best Limited Series or Motion Picture made for Television', 'Cecil B. DeMille Lifetime Achievement Award']
 
 abbreviations = {'television':'tv','motion':'movie','picture':'movie','film':'movie'}
 

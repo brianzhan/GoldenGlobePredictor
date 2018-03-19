@@ -16,7 +16,35 @@ stop = stopwords.words('english')
 pd.options.display.max_colwidth = 400
 
 
-
+matchings = {
+	'Best Motion Picture - Drama': 'Best Motion Picture - Drama',
+	'Best Motion Picture - Musical or Comedy': 'Best Motion Picture - Musical or Comedy',
+	'Best Actor - Motion Picture Drama': 'Best Actor in a Motion Picture – Drama', 
+	'Best Actress - Motion Picture Drama': 'Best Actress in a Motion Picture – Drama', 
+	'Best Actor - Motion Picture Musical or Comedy': 'Best Actor in a Motion Picture – Musical or Comedy',
+	'Best Actress - Motion Picture Musical or Comedy': 'Best Actress in a Motion Picture – Musical or Comedy',
+	'Best Supporting Actor - Motion Picture': 'Best Supporting Actor in a Motion Picture – Drama, Musical or Comedy', 
+	'Best Supporting Actress - Motion Picture': 'Best Supporting Actress in a Motion Picture – Drama, Musical or Comedy', 
+	'Best Director': 'Best Director',
+	'Best Screenplay': 'Best Screenplay',
+	'Best Original Score': 'Best Original Score',
+	'Best Original Song': 'Best Original Song', 
+	'Best Animated Feature Film': 'Best Animated Feature Film', 
+	'Best Foreign Language Film': 'Best Foreign Language Film',
+	'Best Drama Series': 'Best Series - Drama',
+	'Best Comedy Series': 'Best Series - Musical or Comedy',
+	'Best Actor in a Television Drama Series': 'Best Actor in a Television Series – Drama', 
+	'Best Actress in a Television Drama Series': 'Best Actress in a Television Series – Drama', 
+	'Best Actor in a Television Comedy Series': 'Best Actor in a Television Series – Musical or Comedy',
+	'Best Actress in a Television Comedy Series': 'Best Actress in a Television Series – Musical or Comedy',
+	'Best Actor in a Limited Series made for Television': 'Best Actor in a Miniseries or Television Film',
+	'Best Actress in a Limited Series made for Television': 'Best Actress in a Miniseries or Television Film',
+	'Best Supporting Actor in a Limited Series made for Television': 'Best Supporting Actor in a Series, Miniseries or Television Film',
+	'Best Supporting Actress in a Limited Series made for Television': 'Best Supporting Actress in a Series, Miniseries or Television Film', 
+	'Best Limited Series or Motion Picture made for Television': 'Best Miniseries or Television Film', 
+	'Cecil B. DeMille Lifetime Achievement Award': 'Cecil B. DeMille Lifetime Achievement Award'
+	
+}
 
 # Motion Picture Awards
 mAwards = ['Best Motion Picture - Drama','Best Motion Picture - Musical or Comedy','Best Actor - Motion Picture Drama', 'Best Actress - Motion Picture Drama', 'Best Actor - Motion Picture Musical or Comedy',
@@ -58,23 +86,14 @@ class Award:
 		self.voting_dict = voting_dict
 		self.filtered_sentence = filtered_sentence
 
-	def print_award(self, curr_awards):
-		with open('gg2018_blankformat.json') as data_file:
-			data = json.load(data_file)
-		award_json = {}
-		# award_json['name'] = self.name
-		award_json['winner'] = self.winner
-		award_json['presenter'] = self.voting_dict[2]
-		award_json['nominee'] = self.voting_dict[3]
-		return award_json
-
-		# print('Award: {}'.format(self.name))
-		# # print('Presented By: {}'.format(', '.join(self.presenters)))
-		# # print('Nominees: {}'.format(', '.join(self.nominees)))
-		# print('Winner votes: {}'.format(self.voting_dict[1]))
-		# print('Presenter votes: {}'.format(self.voting_dict[2]))
-		# print('Nominee votes: {}'.format(self.voting_dict[3]))
-		# print('Winner: {}\n'.format(self.winner))
+	def print_award(self):
+		print('Award: {}'.format(self.name))
+		print('Presented By: {}'.format(', '.join(self.presenters)))
+		print('Nominees: {}'.format(', '.join(self.nominees)))
+		print('Winner votes: {}'.format(self.voting_dict[1]))
+		print('Presenter votes: {}'.format(self.voting_dict[2]))
+		print('Nominee votes: {}'.format(self.voting_dict[3]))
+		print('Winner: {}\n'.format(self.winner))
 
 
 
@@ -412,12 +431,19 @@ def findHost(dataframe):
 	return host_name
 
 def print_results(dataframe):
-	final_list = {}
-	final_list["Host"] = findHost(dataframe)
+	with open('gg2018_blankformat.json') as data_file:
+		curr_awards = json.load(data_file)
+	curr_awards["Host"] = findHost(dataframe)
 	print("\n Printing Final Results as JSON \n")
 	for award in Award_list:
-		final_list[award.name] = award.print_award()
-	print(final_list)
+		# print('current award is ', award)
+		# print('current presenter is ', award.voting_dict[2])
+		# # print('curr_award presenter reads ', curr_awards[award].Presenters)
+		matchingName = matchings[award.name] 
+		curr_awards[matchingName]['Presenters'] = award.voting_dict[2]
+		curr_awards[matchingName]['Winner'] = award.winner
+		curr_awards[matchingName]['Nominees'] = award.voting_dict[3]
+	print(curr_awards)
 
 def initializeJSONfile(path):
 	# Check whether the simplified JSON files exist, if not, generate it

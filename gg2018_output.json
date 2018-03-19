@@ -7,7 +7,105 @@
 		'Winner': 'Billboards Outside Ebbing'}, 
 	'Best Motion Picture - Musical or Comedy': 
 		{'Presenters': {'AllisonJanney': 5, 'Sethrogen': 7, 'Sebastian Stan': 1, 'Michael Keaton': 6, 'Alicia Vikander': 9, 'ZacEfron': 1}, 
-		'Nominees': {'Lady Bird': 109, 'Zac': 8, 'Oh': 92, 'The': 26, 'Get Out': 3, 'Three Billboards': 3, 'Showman': 1, 'Greta': 1, 'Annoyed': 1, 'Alison Janney': 1, 'Laurie Metcalf': 1, 'Lady': 1}, 'Winner': 'Lady Bird'}, 'Best Actor in a Motion Picture – Drama': {'Presenters': {'Susan Sarandon': 5, 'Geena Davis': 5}, 'Nominees': {'Gary Oldman': 100}, 'Winner': 'Gary Oldman'}, 'Best Actress in a Motion Picture – Drama': {'Presenters': {'AngelinaJolie': 1}, 'Nominees': {'Good Luck': 2, 'Angelina': 6, 'Frances McDormand': 100}, 'Winner': 'Frances McDormand'}, 'Best Actor in a Motion Picture – Musical or Comedy': {'Presenters': {'Shirley MacLaine': 2}, 'Nominees': {'James Franco': 123, 'Daniel Kaluuya': 23, 'Hugh': 2, 'Jackman': 1, 'James': 3, 'Daniel': 2, 'Franco': 2, 'Get Out': 2, 'Casey Affleck': 1, 'Denzel Washington': 1, 'Unworthy': 1}, 'Winner': 'James Franco'}, 'Best Actress in a Motion Picture – Musical or Comedy': {'Presenters': {}, 'Nominees': {'Saoirse Ronan': 102, 'Margot Robbie': 1}, 'Winner': 'Saoirse Ronan'}, 'Best Supporting Actor in a Motion Picture – Drama, Musical or Comedy': {'Presenters': {'Announce': 1}, 'Nominees': {'Sam Rockwell': 100}, 'Winner': 'Sam Rockwell'}, 'Best Supporting Actress in a Motion Picture – Drama, Musical or Comedy': {'Presenters': {}, 'Nominees': {'Allison Janney': 100}, 'Winner': 'Allison Janney'}, 'Best Director': {'Presenters': {'Natalie Portman': 1121, 'Ron Howard': 2412, 'KrisLovesMina': 1, 'Daaaamn': 1, 'goldenglobes': 17, 'Oprah': 29, 'Guillermo': 45, 'Toro': 45}, 'Nominees': {'And': 230, 'Natalie Portman': 1166, 'More': 1, 'Here': 3, 'No': 5, 'Oh': 23, 'Wait': 38, 'The': 68, 'Thank': 3, "After Oprah 's": 2, 'Shout': 4, 'Also': 1, 'Writer': 1, 'That': 74, 'Spoiler Alert': 8, 'Did': 1, 'HAHAHAHA': 3, 'Nightline': 48, 'FACT': 1, 'Uhm': 1, 'SAY IT NATALIE': 22, 'Lady Bird': 3, 'PATTY': 1, 'Greta Gerwig': 69, 'How Denis Villeneuve': 16, 'Last': 579, 'Dang': 2, 'Somebody': 1, 'Just': 11, 'Dumb': 1, 'Hey': 30, 'Still': 1, 'With': 1, 'Omg I': 15, 'Sure': 1, "'We": 3, 'Hell': 1, 'Really': 1, 'Shade': 1, 'Regarding': 56, "Natalie 's": 1, 'Guillermo Del Toro': 100, 'Sad': 1, 'Nolan': 1}, 'Winner': 'Guillermo Del Toro'}, 'Best Screenplay': {'Presenters': {'GoldenGlobes': 1, 'Catherine Zeta-Jones': 129, 'Kirk Douglas': 129}, 'Nominees': {'Ugh': 1, 'Wild': 1, 'The': 9, 'Martin McDonagh': 100}, 'Winner': 'Martin McDonagh'}, 'Best Original Score': {'Presenters': {'HugoGloss': 1, 'GoldenGlobes': 2, 'MariahCarey': 41}, 'Nominees': {'Alexandre Desplat': 100}, 'Winner': 'Alexandre Desplat'}, 'Best Original Song': {'Presenters': {'KellyClarkson': 2}, 'Nominees': {'Three': 1, 'In': 1, 'Miley': 12, 'Me': 1, 'Janet Jackson': 14, "We 're": 1, 'Good': 3, 'At': 93, 'Mariah Carey': 9, 'It': 27, 'Sufjan': 8, 'Coco': 1, 'This': 1, 'No': 1, 'Benj Pasek': 100}, 'Winner': 'Benj Pasek'}, 'Best Animated Feature Film': {'Presenters': {}, 'Nominees': {'Hearty Congrats': 2, 'BOSS BABY': 1, 'Coco': 107, 'Boss Baby': 2, 'The Greatest Showman': 1, 'Proof': 1, 'Wow I': 1, 'Umm': 1}, 'Winner': 'Coco'}, 'Best Foreign Language Film': {'Presenters': {}, 'Nominees': {'A Fantastic Woman': 1, 'First They Killed My Father': 1, 'The Square': 1, 'In The Fade': 100, 'Loveless': 1}, 'Winner': 'In The Fade'}, 'Best Series - Drama': {'Presenters': {'John Goodman': 62}, 'Nominees': {'Actual': 2, "The Handmaid 's Tale": 100}, 'Winner': "The Handmaid 's Tale"}, 'Best Series - Musical or Comedy': {'Presenters': {'Khaleesi': 2, 'Jon Snow': 2}, 'Nominees': {'Three': 8, 'The Marvelous Mrs. Maisel': 100}, 'Winner': 'The Marvelous Mrs. Maisel'}, 'Best Actor in a Television Series – Drama': {'Presenters': {}, 'Nominees': {'Tonight': 3, 'Sterling K. Brown': 100}, 'Winner': 'Sterling K. Brown'}, 'Best Actress in a Television Series – Drama': {'Presenters': {}, 'Nominees': {'Caitriona Balfe': 1, 'Claire Foy': 1, 'Elisabeth Moss': 100, 'Katherine Langford': 2, 'Maggie Gyllenhaal': 1}, 'Winner': 'Elisabeth Moss'}, 'Best Actor in a Television Series – Musical or Comedy': {'Presenters': {}, 'Nominees': {'Aziz Ansari': 100}, 'Winner': 'Aziz Ansari'}, 'Best Actress in a Television Series – Musical or Comedy': {'Presenters': {}, 'Nominees': {'Pamela Adlon': 1, 'Alison Brie': 1, 'Rachel Brosnahan': 100, 'Issa Rae': 1, 'Frankie Shaw': 1}, 'Winner': 'Rachel Brosnahan'}, 'Best Actor in a Miniseries or Television Film': {'Presenters': {}, 'Nominees': {'Strong': 2, 'Ewan McGregor': 100}, 'Winner': 'Ewan McGregor'}, 'Best Actress in a Miniseries or Television Film': {'Presenters': {}, 'Nominees': {'Nicole Kidman': 100}, 'Winner': 'Nicole Kidman'}, 'Best Supporting Actor in a Series, Miniseries or Television Film': {'Presenters': {}, 'Nominees': {'Alexander Skarsgård': 100}, 'Winner': 'Alexander Skarsgård'}, 'Best Supporting Actress in a Series, Miniseries or Television Film': {'Presenters': {}, 'Nominees': {'Laura Dern': 101, 'Fuck Laura Dern': 1}, 'Winner': 'Laura Dern'}, 'Best Miniseries or Television Film': {'Presenters': {'GalGadot': 2, 'Dwayne Johnson': 1, 'Robert Pattinson': 33, 'Emma Watson': 31, 'Lady Bird': 2}, 'Nominees': {'Big Little Lies': 1, 'Fargo': 1, 'Feud': 1, 'Of': 3, 'Nicole Kidman': 100}, 'Winner': 'Nicole Kidman'}, 'Cecil B. DeMille Lifetime Achievement Award': {'Presenters': {'ReeseWitherspoon': 1}, 'Nominees': {'Oprah Winfrey': 100}, 'Winner': 'Oprah Winfrey'}}
+		'Nominees': {'Lady Bird': 109, 'Zac': 8, 'Oh': 92, 'The': 26, 'Get Out': 3, 'Three Billboards': 3, 'Showman': 1, 'Greta': 1, 'Annoyed': 1, 'Alison Janney': 1, 'Laurie Metcalf': 1, 'Lady': 1}, 
+		'Winner': 'Lady Bird'}, 
+	'Best Actor in a Motion Picture – Drama': 
+		{'Presenters': {'Susan Sarandon': 5, 'Geena Davis': 5}, 
+		'Nominees': {'Gary Oldman': 100}, 
+		'Winner': 'Gary Oldman'}, 
+	'Best Actress in a Motion Picture – Drama': 
+		{'Presenters': {'AngelinaJolie': 1}, 
+		'Nominees': {'Good Luck': 2, 'Angelina': 6, 'Frances McDormand': 100}, 
+		'Winner': 'Frances McDormand'}, 
+	'Best Actor in a Motion Picture – Musical or Comedy': 
+		{'Presenters': {'Shirley MacLaine': 2}, 
+		'Nominees': {'James Franco': 123, 'Daniel Kaluuya': 23, 'Hugh': 2, 'Jackman': 1, 'James': 3, 'Daniel': 2, 'Franco': 2, 'Get Out': 2, 'Casey Affleck': 1, 'Denzel Washington': 1, 'Unworthy': 1}, 
+		'Winner': 'James Franco'}, 
+	'Best Actress in a Motion Picture – Musical or Comedy': 
+		{'Presenters': {}, 
+		'Nominees': {'Saoirse Ronan': 102, 'Margot Robbie': 1}, 
+		'Winner': 'Saoirse Ronan'}, 
+	'Best Supporting Actor in a Motion Picture – Drama, Musical or Comedy': 
+		{'Presenters': {'Announce': 1}, 
+		'Nominees': {'Sam Rockwell': 100}, 
+		'Winner': 'Sam Rockwell'}, 
+	'Best Supporting Actress in a Motion Picture – Drama, Musical or Comedy':
+		{'Presenters': {}, 
+		'Nominees': {'Allison Janney': 100},
+		'Winner': 'Allison Janney'}, 
+	'Best Director': 
+		{'Presenters': {'Natalie Portman': 1121, 'Ron Howard': 2412, 'KrisLovesMina': 1, 'Daaaamn': 1, 'goldenglobes': 17, 'Oprah': 29, 'Guillermo': 45, 'Toro': 45}, 
+		'Nominees': {'And': 230, 'Natalie Portman': 1166, 'Guillermo Del Toro': 100}, 
+		'Winner': 'Guillermo Del Toro'}, 
+	'Best Screenplay': 
+		{'Presenters': {'GoldenGlobes': 1, 'Catherine Zeta-Jones': 129, 'Kirk Douglas': 129}, 
+		'Nominees': {'Ugh': 1, 'Wild': 1, 'The': 9, 'Martin McDonagh': 100}, 
+		'Winner': 'Martin McDonagh'}, 
+	'Best Original Score': 
+		{'Presenters': {'HugoGloss': 1, 'GoldenGlobes': 2, 'MariahCarey': 41}, 
+		'Nominees': {'Alexandre Desplat': 100}, 
+		'Winner': 'Alexandre Desplat'}, 
+	'Best Original Song': 
+		{'Presenters': {'KellyClarkson': 2}, 
+		'Nominees': {'Janet Jackson': 14, 'Mariah Carey': 9, 'It': 27, 'Sufjan': 8, 'Coco': 1, 'This': 1, 'No': 1, 'Benj Pasek': 100}, 
+		'Winner': 'Benj Pasek'},
+	'Best Animated Feature Film': 
+		{'Presenters': {}, 
+		'Nominees': {'Hearty Congrats': 2, 'BOSS BABY': 1, 'Coco': 107, 'Boss Baby': 2, 'The Greatest Showman': 1, 'Proof': 1, 'Wow I': 1, 'Umm': 1}, 
+		'Winner': 'Coco'}, 
+	'Best Foreign Language Film': 
+		{'Presenters': {}, 
+		'Nominees': {'A Fantastic Woman': 1, 'First They Killed My Father': 1, 'The Square': 1, 'In The Fade': 100, 'Loveless': 1}, 
+		'Winner': 'In The Fade'}, 
+	'Best Series - Drama': 
+		{'Presenters': {'John Goodman': 62}, 
+		'Nominees': {'Actual': 2, "The Handmaid 's Tale": 100}, 
+		'Winner': "The Handmaid 's Tale"}, 
+	'Best Series - Musical or Comedy': 
+		{'Presenters': {'Khaleesi': 2, 'Jon Snow': 2}, 
+		'Nominees': {'Three': 8, 'The Marvelous Mrs. Maisel': 100}, 
+		'Winner': 'The Marvelous Mrs. Maisel'}, 
+	'Best Actor in a Television Series – Drama': 
+		{'Presenters': {}, 
+		'Nominees': {'Tonight': 3, 'Sterling K. Brown': 100}, 
+		'Winner': 'Sterling K. Brown'}, 
+	'Best Actress in a Television Series – Drama': 
+		{'Presenters': {}, 
+		'Nominees': {'Caitriona Balfe': 1, 'Claire Foy': 1, 'Elisabeth Moss': 100, 'Katherine Langford': 2, 'Maggie Gyllenhaal': 1}, 
+		'Winner': 'Elisabeth Moss'}, 
+	'Best Actor in a Television Series – Musical or Comedy': 
+		{'Presenters': {}, 
+		'Nominees': {'Aziz Ansari': 100}, 
+		'Winner': 'Aziz Ansari'}, 
+	'Best Actress in a Television Series – Musical or Comedy': 
+		{'Presenters': {}, 
+		'Nominees': {'Pamela Adlon': 1, 'Alison Brie': 1, 'Rachel Brosnahan': 100, 'Issa Rae': 1, 'Frankie Shaw': 1}, 
+		'Winner': 'Rachel Brosnahan'}, 
+	'Best Actor in a Miniseries or Television Film': 
+		{'Presenters': {}, 
+		'Nominees': {'Strong': 2, 'Ewan McGregor': 100}, 
+		'Winner': 'Ewan McGregor'}, 
+	'Best Actress in a Miniseries or Television Film': 
+		{'Presenters': {}, 
+		'Nominees': {'Nicole Kidman': 100}, 
+		'Winner': 'Nicole Kidman'}, 
+	'Best Supporting Actor in a Series, Miniseries or Television Film': 
+		{'Presenters': {}, 
+		'Nominees': {'Alexander Skarsgård': 100}, 
+		'Winner': 'Alexander Skarsgård'}, 
+	'Best Supporting Actress in a Series, Miniseries or Television Film': 
+		{'Presenters': {}, 
+		'Nominees': {'Laura Dern': 101, 'Fuck Laura Dern': 1}, 
+		'Winner': 'Laura Dern'}, 
+	'Best Miniseries or Television Film': 
+		{'Presenters': {'GalGadot': 2, 'Dwayne Johnson': 1, 'Robert Pattinson': 33, 'Emma Watson': 31, 'Lady Bird': 2}, 
+		'Nominees': {'Big Little Lies': 1, 'Fargo': 1, 'Feud': 1, 'Of': 3, 'Nicole Kidman': 100}, 
+		'Winner': 'Nicole Kidman'}, 
+	'Cecil B. DeMille Lifetime Achievement Award': 
+		{'Presenters': {'ReeseWitherspoon': 1}, 
+			'Nominees': {'Oprah Winfrey': 100}, 
+		'Winner': 'Oprah Winfrey'}
+}
 
 
 		*/
